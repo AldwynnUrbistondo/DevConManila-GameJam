@@ -7,13 +7,13 @@ public class Projectile : MonoBehaviour
     public Transform target;
     public float damage;
 
-    public void Awake()
+    public virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, 3);
     }
 
-    public void Shoot()
+    public virtual void Shoot()
     {
         Vector2 direction = (target.position - transform.position).normalized;
         rb.linearVelocity = direction * 25;

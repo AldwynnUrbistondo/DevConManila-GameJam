@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    public int wave = 1;
+
 
     [Header("Enemy Prefabs")]
     public GameObject meleeEnemyPrefab;
@@ -27,26 +29,21 @@ public class SpawnManager : MonoBehaviour
 
     private void Start()
     {
+        CalculateEnemiesForWave(wave);
         StartWave();
     }
 
     IEnumerator SpawnEnemies()
     {
-
         float delay = totalSpawnTime / enemyPrefabs.Count;
-
         foreach (GameObject e in enemyPrefabs)
         {
             int randomLoc = Random.Range(0, spawnLocations.Length);
             GameObject enemy = Instantiate(e, spawnLocations[randomLoc].position, Quaternion.identity);
-
             yield return new WaitForSeconds(delay);
         }
-
         CalculateNextWave();
-
         yield return new WaitForSeconds(5);
-
         StartWave();
     }
 
@@ -56,12 +53,10 @@ public class SpawnManager : MonoBehaviour
         {
             enemyPrefabs.Add(meleeEnemyPrefab);
         }
-
         for (int i = 0; i < numOfRangeEnemies; i++)
         {
             enemyPrefabs.Add(rangeEnemyPrefab);
         }
-
         Shuffle(enemyPrefabs);
         StartCoroutine(SpawnEnemies());
     }
@@ -69,13 +64,48 @@ public class SpawnManager : MonoBehaviour
     void CalculateNextWave()
     {
         enemyPrefabs.Clear();
-
-        numOfMeleeEnemies += addMeleeEnemies;
-        numOfRangeEnemies += addRangeEnemies;
-
-        addMeleeEnemies++;
-        addRangeEnemies++;
+        wave++;
+        CalculateEnemiesForWave(wave);
     }
+
+    public void CalculateEnemiesForWave(int currentWave)
+    {
+        // Reset counts to calculate from scratch
+        numOfMeleeEnemies = 1;
+        numOfRangeEnemies = 0;
+        addMeleeEnemies = 1;
+        addRangeEnemies = 1;
+        hpMultiplier = 0;
+
+        // Calculate for each wave from 1 to current wave
+        for (int w = 1; w <= currentWave; w++)
+        {
+            if (w % 10 == 1 && w > 10)
+            {
+                addMeleeEnemies++;
+                addRangeEnemies++;
+            }
+
+            if (w % 10 == 0)
+            {
+                hpMultiplier += 0.5f;
+            }
+            else
+            {
+                numOfMeleeEnemies += addMeleeEnemies;
+                if (w >= 5)
+                {
+                    numOfRangeEnemies += addRangeEnemies;
+                }
+            }
+            
+            numOfMeleeEnemies = Mathf.Clamp(numOfMeleeEnemies, 0, 50);
+            numOfRangeEnemies = Mathf.Clamp(numOfRangeEnemies, 0, 50);
+        }
+
+    }
+
+ 
 
     void Shuffle<T>(List<T> list)
     {

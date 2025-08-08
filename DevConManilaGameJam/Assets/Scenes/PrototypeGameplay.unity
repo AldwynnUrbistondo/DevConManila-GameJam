@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &572196
 Transform:
   m_ObjectHideFlags: 0
@@ -419,7 +419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &176717569
 Transform:
   m_ObjectHideFlags: 0
@@ -699,6 +699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac7f2fd09916d1b40b35fc457c8e3cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wave: 1
   meleeEnemyPrefab: {fileID: 6980312190939295689, guid: 1a62a91ea046e734c9b32adb46574b02, type: 3}
   rangeEnemyPrefab: {fileID: 3806545884738903630, guid: 548d984205ff5dc4392116b9f6ccd6b2, type: 3}
   spawnLocations:
@@ -706,10 +707,10 @@ MonoBehaviour:
   - {fileID: 1836406187}
   enemyPrefabs: []
   totalSpawnTime: 30
-  numOfMeleeEnemies: 2
-  numOfRangeEnemies: 2
-  addMeleeEnemies: 1
-  addRangeEnemies: 1
+  numOfMeleeEnemies: 0
+  numOfRangeEnemies: 0
+  addMeleeEnemies: 0
+  addRangeEnemies: 0
   hpMultiplier: 0
 --- !u!4 &711723741
 Transform:
@@ -1485,7 +1486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2086582957
 Transform:
   m_ObjectHideFlags: 0

@@ -10,8 +10,14 @@ public class EnemyMelee : Enemy
         if (!TargetInRange())
         {
             Vector2 direction = (playerPos.position - transform.position).normalized;
-
-            rb.linearVelocity = new Vector2(direction.x * moveSpeed, 0);
+            if (!isFrozen)
+            {
+                rb.linearVelocity = new Vector2(direction.x * moveSpeed, 0);
+            }
+            else
+            {
+                rb.linearVelocity = new Vector2(direction.x * (moveSpeed / 2), 0);
+            }
 
             Flip(direction);
         }

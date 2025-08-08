@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4061901700849140830}
   - component: {fileID: 3224142093227361300}
   - component: {fileID: 149654388837040183}
-  - component: {fileID: 8247655398781663133}
   - component: {fileID: 4419327907607040180}
+  - component: {fileID: -4931083599145531507}
   m_Layer: 0
   m_Name: Projectile Ice
   m_TagString: Untagged
@@ -154,21 +154,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &8247655398781663133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3310936811614218153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d4cffb3785ffd4588a5099e5aff391, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  target: {fileID: 0}
-  damage: 0
 --- !u!96 &4419327907607040180
 TrailRenderer:
   serializedVersion: 3
@@ -285,3 +270,18 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &-4931083599145531507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3310936811614218153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e305abbb8a50c7468d53e79b27f8d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  target: {fileID: 0}
+  damage: 0

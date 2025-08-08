@@ -24,7 +24,6 @@ public class ProjectileWind : Projectile
 
     public override void OnTriggerEnter2D(Collider2D actor)
     {
-
         IDamageable damageable = actor.GetComponent<IDamageable>();
         if (damageable != null)
         {

@@ -5,10 +5,13 @@ public class Enemy : MonoBehaviour, IDamageable
 {
     [HideInInspector] public Transform playerPos;
     [HideInInspector] public Rigidbody2D rb;
+    [HideInInspector] public SpriteRenderer spriteRenderer;
 
     public float currentHealth;
     public float maxHealth;
     public bool isDying;
+
+    public bool isFrozen = false;
 
     public float moveSpeed = 2;
     [HideInInspector] public bool isFacingRight = true;
@@ -19,13 +22,20 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public virtual void Update()
     {
         Vector2 direction = (playerPos.position - transform.position).normalized;
-
-        rb.linearVelocity = new Vector2(direction.x * moveSpeed, 0);
+        if (!isFrozen)
+        {
+            rb.linearVelocity = new Vector2(direction.x * moveSpeed, 0);
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(direction.x * (moveSpeed/2), 0);
+        }
 
         Flip(direction);
     }

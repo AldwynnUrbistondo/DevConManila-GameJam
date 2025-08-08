@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 572195}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 1, y: 0.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -168,7 +168,7 @@ MonoBehaviour:
   enemyInRange: []
   nearestEnemy: {fileID: 0}
   nearestEnemyDistance: 0
-  projectilePrefab: {fileID: 316745101218323849, guid: c88d6f7c1aedf4c49b845433c5bd40cd, type: 3}
+  projectilePrefab: {fileID: 2483643902636425367, guid: 2f0edd84d007d544aa3decc52f55dd6d, type: 3}
   firePoint: {fileID: 572196}
   rb: {fileID: 0}
   fireRate: 0.5
@@ -211,7 +211,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.21133333}
-  m_Radius: 15
+  m_Radius: 5
 --- !u!212 &572199
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -376,9 +376,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPos: {fileID: 0}
   rb: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   currentHealth: 50
   maxHealth: 50
   isDying: 0
+  isFrozen: 0
   moveSpeed: 2
   isFacingRight: 1
   healthBarCanvas: {fileID: 1493194974}
@@ -567,7 +569,7 @@ MonoBehaviour:
   enemyInRange: []
   nearestEnemy: {fileID: 0}
   nearestEnemyDistance: 0
-  projectilePrefab: {fileID: 316745101218323849, guid: c88d6f7c1aedf4c49b845433c5bd40cd, type: 3}
+  projectilePrefab: {fileID: 3310936811614218153, guid: e2e2d964169e2a64bb2d1a4668426b7f, type: 3}
   firePoint: {fileID: 176717569}
   rb: {fileID: 0}
   fireRate: 0.5
@@ -850,8 +852,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 176717569}
-  - {fileID: 572196}
   - {fileID: 2086582957}
+  - {fileID: 572196}
   m_Father: {fileID: 1811713156}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &642673534
@@ -1149,12 +1151,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951908136}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.39, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1811713156}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &951908140
 MonoBehaviour:
@@ -1705,6 +1707,7 @@ Transform:
   m_Children:
   - {fileID: 1725828821}
   - {fileID: 370374210}
+  - {fileID: 951908139}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1811713157
@@ -1926,7 +1929,7 @@ Transform:
   m_GameObject: {fileID: 2086582956}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1947,10 +1950,10 @@ MonoBehaviour:
   enemyInRange: []
   nearestEnemy: {fileID: 0}
   nearestEnemyDistance: 0
-  projectilePrefab: {fileID: 316745101218323849, guid: c88d6f7c1aedf4c49b845433c5bd40cd, type: 3}
+  projectilePrefab: {fileID: 7941422287779468028, guid: 6ef69c7e1e5f2904fbbb23f0f1bf23e8, type: 3}
   firePoint: {fileID: 2086582957}
   rb: {fileID: 0}
-  fireRate: 0.5
+  fireRate: 0.3
   fireInterval: 0
   damage: 1
   critRate: 0
@@ -2080,9 +2083,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPos: {fileID: 0}
   rb: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   currentHealth: 50
   maxHealth: 50
   isDying: 0
+  isFrozen: 0
   moveSpeed: 2
   isFacingRight: 1
   healthBarCanvas: {fileID: 1153143420}
@@ -2226,7 +2231,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 951908139}
   - {fileID: 642673537}
   - {fileID: 1811713156}
   - {fileID: 112888750}

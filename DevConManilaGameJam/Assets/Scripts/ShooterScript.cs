@@ -121,8 +121,7 @@ public class ShooterScript : MonoBehaviour
     public virtual void OnTriggerStay2D(Collider2D actor)
     {
         Enemy enemy = actor.GetComponent<Enemy>();
-
-        if (enemy != null)
+        if (enemy != null && !enemyInRange.Contains(enemy))
         {
             enemyInRange.Add(enemy);
         }
@@ -131,14 +130,9 @@ public class ShooterScript : MonoBehaviour
     public virtual void OnTriggerExit2D(Collider2D actor)
     {
         Enemy enemy = actor.GetComponent<Enemy>();
-
         if (enemy != null)
         {
-            if (enemy.isDying)
-            {
-                enemyInRange.Remove(enemy);
-            }
-
+            enemyInRange.Remove(enemy); // Remove regardless of isDying
         }
     }
 

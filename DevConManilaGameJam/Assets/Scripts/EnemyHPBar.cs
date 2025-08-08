@@ -40,7 +40,6 @@ public class EnemyHPBar : MonoBehaviour
         }
 
 
-
         // Hide health bar when dead
         if (_health <= 0 || enemy.isDying)
         {

@@ -6,7 +6,6 @@ public class SpawnManager : MonoBehaviour
 {
     public int wave = 1;
 
-
     [Header("Enemy Prefabs")]
     public GameObject meleeEnemyPrefab;
     public GameObject rangeEnemyPrefab;

@@ -247,8 +247,8 @@ MonoBehaviour:
   playerPos: {fileID: 0}
   rb: {fileID: 0}
   spriteRenderer: {fileID: 0}
-  currentHealth: 50
-  maxHealth: 50
+  currentHealth: 7
+  maxHealth: 7
   isDying: 0
   isFrozen: 0
   moveSpeed: 2

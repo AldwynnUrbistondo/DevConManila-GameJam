@@ -987,7 +987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9291fb7d0b55d64f9c698bc1baed367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 10
+  coins: 99999999
   coinsText: {fileID: 314688031}
   playerStats: {fileID: 0}
   healthButton: {fileID: 582278660}
@@ -1017,6 +1017,15 @@ MonoBehaviour:
   laserPetPrice: 0
   cryoPetPrice: 0
   energyWavePetPrice: 0
+  healthPriceScale: 0.2
+  healthRegenPriceScale: 0.2
+  damagePriceScale: 0.2
+  critDamagePriceScale: 0.2
+  critRatePriceScale: 0.4
+  attackSpeedPriceScale: 0.4
+  laserPetPriceScale: 0.5
+  cryoPetPriceScale: 0.5
+  energyWavePetPriceScale: 0.5
   healthLevel: 0
   healthRegenLevel: 0
   damageLevel: 0
@@ -2141,7 +2150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac7f2fd09916d1b40b35fc457c8e3cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wave: 1
+  wave: 100
   waveText: {fileID: 438706621}
   meleeEnemyPrefab: {fileID: 6980312190939295689, guid: 1a62a91ea046e734c9b32adb46574b02, type: 3}
   rangeEnemyPrefab: {fileID: 3806545884738903630, guid: 548d984205ff5dc4392116b9f6ccd6b2, type: 3}
@@ -5088,6 +5097,12 @@ MonoBehaviour:
   critDamage: 0
   critRate: 0
   attackSpeed: 0.5
+  maxHealthScale: 0.075
+  healthRegenScale: 0.1
+  damageScale: 0.1
+  critDamageScale: 5
+  critRateScale: 4
+  attackSpeedScale: 0.015
   playerAttack: {fileID: 0}
   shop: {fileID: 0}
 --- !u!1 &1819896209

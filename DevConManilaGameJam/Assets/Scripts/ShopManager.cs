@@ -45,6 +45,18 @@ public class ShopManager : MonoBehaviour
     public int cryoPetPrice;
     public int energyWavePetPrice;
 
+    [Header("Price Scaling")]
+    public float healthPriceScale;
+    public float healthRegenPriceScale;
+    public float damagePriceScale;
+    public float critDamagePriceScale;
+    public float critRatePriceScale;
+    public float attackSpeedPriceScale;
+
+    public float laserPetPriceScale;
+    public float cryoPetPriceScale;
+    public float energyWavePetPriceScale;
+
     [Header("Level")]
     public int healthLevel;
     public int healthRegenLevel;
@@ -84,16 +96,16 @@ public class ShopManager : MonoBehaviour
     // Calculate all current upgrade prices
     private void UpdatePrices()
     {
-        healthPrice = CalculatePrice(10, healthLevel - 1, 0.5f);
-        healthRegenPrice = CalculatePrice(10, healthRegenLevel - 1, 0.5f);
-        damagePrice = CalculatePrice(10, damageLevel - 1, 0.5f);
-        critDamagePrice = CalculatePrice(10, critDamageLevel - 1, 0.5f);
-        critRatePrice = CalculatePrice(30, critRateLevel - 1, 0.5f);
-        attackSpeedPrice = CalculatePrice(30, attackSpeedLevel - 1, 0.5f);
+        healthPrice = CalculatePrice(10, healthLevel - 1, healthPriceScale);
+        healthRegenPrice = CalculatePrice(10, healthRegenLevel - 1, healthRegenPriceScale);
+        damagePrice = CalculatePrice(10, damageLevel - 1, damagePriceScale);
+        critDamagePrice = CalculatePrice(10, critDamageLevel - 1, critDamagePriceScale);
+        critRatePrice = CalculatePrice(30, critRateLevel - 1, critRatePriceScale);
+        attackSpeedPrice = CalculatePrice(30, attackSpeedLevel - 1, attackSpeedPriceScale);
 
-        laserPetPrice = CalculatePrice(75, laserPetLevel, 0.5f);
-        cryoPetPrice = CalculatePrice(50, cryoPetLevel, 0.5f);
-        energyWavePetPrice = CalculatePrice(150, energyWavePetLevel, 0.5f);
+        laserPetPrice = CalculatePrice(50, laserPetLevel, laserPetPriceScale);
+        cryoPetPrice = CalculatePrice(30, cryoPetLevel, cryoPetPriceScale);
+        energyWavePetPrice = CalculatePrice(100, energyWavePetLevel, energyWavePetPriceScale);
     }
 
     public void UpdateButtonState()
@@ -150,8 +162,8 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < level; i++)
         {
             price += (int)(price * increasePercent);
-            price = (int)(Math.Round(price / 5.0) * 5);
         }
+        //price = (int)(Math.Round(price / 5.0) * 5);
         return price;
     }
 

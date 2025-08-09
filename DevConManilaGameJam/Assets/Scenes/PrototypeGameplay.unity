@@ -2150,7 +2150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac7f2fd09916d1b40b35fc457c8e3cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wave: 100
+  wave: 1
   waveText: {fileID: 438706621}
   meleeEnemyPrefab: {fileID: 6980312190939295689, guid: 1a62a91ea046e734c9b32adb46574b02, type: 3}
   rangeEnemyPrefab: {fileID: 3806545884738903630, guid: 548d984205ff5dc4392116b9f6ccd6b2, type: 3}
@@ -2268,8 +2268,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2404,8 +2404,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3391,8 +3391,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3527,8 +3527,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3874,8 +3874,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4221,8 +4221,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5103,6 +5103,12 @@ MonoBehaviour:
   critDamageScale: 5
   critRateScale: 4
   attackSpeedScale: 0.015
+  maxHealthText: {fileID: 1544402681}
+  healthRegenText: {fileID: 1266051983}
+  damageText: {fileID: 731880238}
+  critDamageText: {fileID: 1122432065}
+  critRateText: {fileID: 731883432}
+  attackSpeedText: {fileID: 1385079095}
   playerAttack: {fileID: 0}
   shop: {fileID: 0}
 --- !u!1 &1819896209

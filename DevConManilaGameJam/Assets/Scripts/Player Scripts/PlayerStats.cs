@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -20,6 +21,14 @@ public class PlayerStats : MonoBehaviour
 
     public float critRateScale;
     public float attackSpeedScale;
+
+    [Header("Stats Info Text")]
+    public TextMeshProUGUI maxHealthText;
+    public TextMeshProUGUI healthRegenText;
+    public TextMeshProUGUI damageText;
+    public TextMeshProUGUI critDamageText;
+    public TextMeshProUGUI critRateText;
+    public TextMeshProUGUI attackSpeedText;
 
     public PlayerAttack playerAttack;
     public ShopManager shop;
@@ -59,6 +68,13 @@ public class PlayerStats : MonoBehaviour
         CritDamageCalculation();
         CritRateCalculation();
         AttackSpeedCalculation();
+
+        maxHealthText.text = $"Health: {maxHealth}";
+        healthRegenText.text = $"HP Regen: {healthRegen:F2}/s";
+        damageText.text = $"Damage: {damage:F1}";
+        critDamageText.text = $"Crit Dmg: {critDamage}";
+        critRateText.text = $"Crit Rate: {critRate}%";
+        attackSpeedText.text = $"Atk Spd: {attackSpeed:F3}/s";
     }
 
     public void HealthCalculation()

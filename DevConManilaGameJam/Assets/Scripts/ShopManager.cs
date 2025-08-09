@@ -1,11 +1,13 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class ShopManager : MonoBehaviour
 {
     public int coins;
     public TextMeshProUGUI coinsText;
+    public PlayerStats playerStats;
 
     [Header("Buttons")]
     public Button healthButton;
@@ -57,26 +59,16 @@ public class ShopManager : MonoBehaviour
 
     private void Start()
     {
+        playerStats = FindAnyObjectByType<PlayerStats>();
+        SetButtonFunctions();
         InitialValue();
+        UpdatePrices(); // Calculate initial prices
         UpdateButtonState();
     }
 
     private void InitialValue()
     {
-        // = = = = = Price = = = = =
-        healthPrice = 10;
-        healthRegenPrice = 10;
-        damagePrice = 10;
-        critDamagePrice = 10;
-
-        critRatePrice = 30;
-        attackSpeedPrice = 30;
-
-        laserPetPrice = 75;
-        cryoPetPrice = 50;
-        energyWavePetPrice = 150;
-
-        // = = = = = Level = = = = = 
+        // Levels
         healthLevel = 1;
         healthRegenLevel = 1;
         damageLevel = 1;
@@ -89,35 +81,177 @@ public class ShopManager : MonoBehaviour
         energyWavePetLevel = 0;
     }
 
+    // Calculate all current upgrade prices
+    private void UpdatePrices()
+    {
+        healthPrice = CalculatePrice(10, healthLevel - 1, 0.5f);
+        healthRegenPrice = CalculatePrice(10, healthRegenLevel - 1, 0.5f);
+        damagePrice = CalculatePrice(10, damageLevel - 1, 0.5f);
+        critDamagePrice = CalculatePrice(10, critDamageLevel - 1, 0.5f);
+        critRatePrice = CalculatePrice(30, critRateLevel - 1, 0.5f);
+        attackSpeedPrice = CalculatePrice(30, attackSpeedLevel - 1, 0.5f);
+
+        laserPetPrice = CalculatePrice(75, laserPetLevel, 0.5f);
+        cryoPetPrice = CalculatePrice(50, cryoPetLevel, 0.5f);
+        energyWavePetPrice = CalculatePrice(150, energyWavePetLevel, 0.5f);
+    }
+
     public void UpdateButtonState()
     {
+        UpdatePrices(); // Always update prices first
         coinsText.text = $"Credits: {coins}";
 
-
+        // Enable/Disable buttons
         healthButton.interactable = coins >= healthPrice;
         healthRegenButton.interactable = coins >= healthRegenPrice;
         damageButton.interactable = coins >= damagePrice;
         critDamageButton.interactable = coins >= critDamagePrice;
-        critRateButton.interactable = coins >= critRatePrice;
-        attackSpeedButton.interactable = coins >= attackSpeedPrice;
+
+        critRateButton.interactable = coins >= critRatePrice && critRateLevel < 20;
+        attackSpeedButton.interactable = coins >= attackSpeedPrice && attackSpeedLevel < 20;
 
         laserPetButton.interactable = coins >= laserPetPrice;
         cryoPetButton.interactable = coins >= cryoPetPrice;
         energyWavePetButton.interactable = coins >= energyWavePetPrice;
 
-
-
+        // Price texts
         healthPriceText.text = healthPrice.ToString();
         healthRegenPriceText.text = healthRegenPrice.ToString();
         damagePriceText.text = damagePrice.ToString();
         critDamagePriceText.text = critDamagePrice.ToString();
-        critRatePriceText.text = critRatePrice.ToString();
-        attackSpeedPriceText.text = attackSpeedPrice.ToString();
+
+        critRatePriceText.text = (critRateLevel < 20) ? critRatePrice.ToString() : "Max";
+        attackSpeedPriceText.text = (attackSpeedLevel < 20) ? attackSpeedPrice.ToString() : "Max";
 
         laserPetPriceText.text = laserPetPrice.ToString();
         cryoPetPriceText.text = cryoPetPrice.ToString();
         energyWavePetPriceText.text = energyWavePetPrice.ToString();
     }
 
+    public void SetButtonFunctions()
+    {
+        healthButton.onClick.AddListener(HealthUpgrade);
+        healthRegenButton.onClick.AddListener(HealthRegenUpgrade);
+        damageButton.onClick.AddListener(DamageUpgrade);
+        critDamageButton.onClick.AddListener(CritDamageUpgrade);
+        critRateButton.onClick.AddListener(CritRateUpgrade);
+        attackSpeedButton.onClick.AddListener(AttackSpeedUpgrade);
 
+        laserPetButton.onClick.AddListener(LaserPetUpgrade);
+        cryoPetButton.onClick.AddListener(CryoPetUpgrade);
+        energyWavePetButton.onClick.AddListener(EnergyWavePetUpgrade);
+    }
+
+    #region Upgrade Price Calculation
+    // Shared price calculation
+    private int CalculatePrice(int basePrice, int level, float increasePercent)
+    {
+        int price = basePrice;
+        for (int i = 0; i < level; i++)
+        {
+            price += (int)(price * increasePercent);
+            price = (int)(Math.Round(price / 5.0) * 5);
+        }
+        return price;
+    }
+
+    public void HealthUpgrade()
+    {
+        if (coins >= healthPrice)
+        {
+            coins -= healthPrice;
+            healthLevel++;
+            UpdateButtonState();
+            playerStats.UpdateStats();
+        }
+    }
+
+    public void HealthRegenUpgrade()
+    {
+        if (coins >= healthRegenPrice)
+        {
+            coins -= healthRegenPrice;
+            healthRegenLevel++;
+            UpdateButtonState();
+            playerStats.UpdateStats();
+        }
+    }
+
+    public void DamageUpgrade()
+    {
+        if (coins >= damagePrice)
+        {
+            coins -= damagePrice;
+            damageLevel++;
+            UpdateButtonState();
+            playerStats.UpdateStats();
+        }
+    }
+
+    public void CritDamageUpgrade()
+    {
+        if (coins >= critDamagePrice)
+        {
+            coins -= critDamagePrice;
+            critDamageLevel++;
+            UpdateButtonState();
+            playerStats.UpdateStats();
+        }
+    }
+
+    public void CritRateUpgrade()
+    {
+        if (coins >= critRatePrice)
+        {
+            coins -= critRatePrice;
+            critRateLevel++;
+            UpdateButtonState();
+            playerStats.UpdateStats();
+        }
+    }
+
+    public void AttackSpeedUpgrade()
+    {
+        if (coins >= attackSpeedPrice)
+        {
+            coins -= attackSpeedPrice;
+            attackSpeedLevel++;
+            UpdateButtonState();
+            playerStats.UpdateStats();
+        }
+    }
+
+    public void LaserPetUpgrade()
+    {
+        if (coins >= laserPetPrice)
+        {
+            coins -= laserPetPrice;
+            laserPetLevel++;
+            UpdateButtonState();
+            playerStats.UpdateStats();
+        }
+    }
+
+    public void CryoPetUpgrade()
+    {
+        if (coins >= cryoPetPrice)
+        {
+            coins -= cryoPetPrice;
+            cryoPetLevel++;
+            UpdateButtonState();
+            playerStats.UpdateStats();
+        }
+    }
+
+    public void EnergyWavePetUpgrade()
+    {
+        if (coins >= energyWavePetPrice)
+        {
+            coins -= energyWavePetPrice;
+            energyWavePetLevel++;
+            UpdateButtonState();
+            playerStats.UpdateStats();
+        }
+    }
+    #endregion
 }

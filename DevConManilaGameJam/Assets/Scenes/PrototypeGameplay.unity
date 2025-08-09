@@ -987,8 +987,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9291fb7d0b55d64f9c698bc1baed367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 0
+  coins: 10
   coinsText: {fileID: 314688031}
+  playerStats: {fileID: 0}
   healthButton: {fileID: 582278660}
   healthRegenButton: {fileID: 743538547}
   damageButton: {fileID: 145686638}
@@ -5080,13 +5081,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f131c375fc9434fb8b80fed5be3c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  maxHealth: 0
+  currentHealth: 0
   healthRegen: 0.5
   damage: 1
   critDamage: 0
   critRate: 0
   attackSpeed: 0.5
   playerAttack: {fileID: 0}
+  shop: {fileID: 0}
 --- !u!1 &1819896209
 GameObject:
   m_ObjectHideFlags: 0

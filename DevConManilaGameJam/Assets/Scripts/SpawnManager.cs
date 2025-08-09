@@ -12,9 +12,13 @@ public class SpawnManager : MonoBehaviour
 
     public Transform[] spawnLocations;
 
-    [SerializeField] public List<GameObject> enemyPrefabs = new List<GameObject>();
-
-    public float totalSpawnTime = 30f;
+    [Header("Wave Variables")]
+    [SerializeField] public List<GameObject> enemyQueue = new List<GameObject>();
+    [SerializeField] public List<GameObject> activeEnemies = new List<GameObject>();
+    public bool canSpawnRemainingEnemies = false;
+    public bool endWave = false;
+    public int maxNumOfEnemiesInScene;
+    public float totalSpawnTime = 5f;
 
     [Header("Enemy Count")]
     public int numOfMeleeEnemies;
@@ -34,35 +38,78 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator SpawnEnemies()
     {
-        float delay = totalSpawnTime / enemyPrefabs.Count;
-        foreach (GameObject e in enemyPrefabs)
+        float delay = totalSpawnTime / maxNumOfEnemiesInScene;
+        for (int i = 0; i < maxNumOfEnemiesInScene; i++)
         {
             int randomLoc = Random.Range(0, spawnLocations.Length);
-            GameObject enemy = Instantiate(e, spawnLocations[randomLoc].position, Quaternion.identity);
+            GameObject enemy = Instantiate(enemyQueue[0], spawnLocations[randomLoc].position, Quaternion.identity);
+            enemyQueue.RemoveAt(0);
+            activeEnemies.Add(enemy);
+
             yield return new WaitForSeconds(delay);
         }
-        CalculateNextWave();
-        yield return new WaitForSeconds(5);
-        StartWave();
+        canSpawnRemainingEnemies = true;
+
+        //CalculateNextWave();
+        //yield return new WaitForSeconds(5);
+        //StartWave();
+    }
+
+    private void Update()
+    {
+        // Check Destroyed or Dead Enemies
+        activeEnemies.RemoveAll(enemy => enemy == null);
+
+        if (canSpawnRemainingEnemies && !endWave)
+        {
+            if (activeEnemies.Count != maxNumOfEnemiesInScene && enemyQueue.Count > 0)
+            {
+                int randomLoc = Random.Range(0, spawnLocations.Length);
+                GameObject enemy = Instantiate(enemyQueue[0], spawnLocations[randomLoc].position, Quaternion.identity);
+                enemyQueue.RemoveAt(0);
+                activeEnemies.Add(enemy);
+
+                return;
+            }
+
+            if (activeEnemies.Count == 0 && enemyQueue.Count == 0)
+            {
+                canSpawnRemainingEnemies = false;
+                endWave = true;
+
+                CalculateNextWave();
+                StartWave();
+            }
+        }
     }
 
     public void StartWave()
     {
+        endWave = false;
+        maxNumOfEnemiesInScene = 0;
+
         for (int i = 0; i < numOfMeleeEnemies; i++)
         {
-            enemyPrefabs.Add(meleeEnemyPrefab);
+            enemyQueue.Add(meleeEnemyPrefab);
         }
         for (int i = 0; i < numOfRangeEnemies; i++)
         {
-            enemyPrefabs.Add(rangeEnemyPrefab);
+            enemyQueue.Add(rangeEnemyPrefab);
         }
-        Shuffle(enemyPrefabs);
+        Shuffle(enemyQueue);
+
+        maxNumOfEnemiesInScene = (int)(enemyQueue.Count * 0.15f);
+        if (maxNumOfEnemiesInScene < 2)
+        {
+            maxNumOfEnemiesInScene = 2;
+        }
+
         StartCoroutine(SpawnEnemies());
     }
 
     void CalculateNextWave()
     {
-        enemyPrefabs.Clear();
+        enemyQueue.Clear();
         wave++;
         CalculateEnemiesForWave(wave);
     }

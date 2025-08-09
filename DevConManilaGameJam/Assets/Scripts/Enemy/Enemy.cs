@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public Transform healthBarCanvas;
 
-    public void Start()
+    public virtual void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();

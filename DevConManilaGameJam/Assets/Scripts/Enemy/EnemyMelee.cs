@@ -5,6 +5,12 @@ public class EnemyMelee : Enemy
     RaycastHit2D targetRay;
     public float attackDistance;
 
+    public override void Start()
+    {
+        base.Start();
+        attackDistance = Random.Range(1f, 2f);
+    }
+
     public override void Update()
     {
         if (!TargetInRange())

@@ -4,6 +4,12 @@ public class EnemyRange : Enemy
 {
     public float attackDistance;
 
+    public override void Start()
+    {
+        base.Start();
+        attackDistance = Random.Range(3f, 5f);
+    }
+
     public override void Update()
     {
         if (!TargetInRange())

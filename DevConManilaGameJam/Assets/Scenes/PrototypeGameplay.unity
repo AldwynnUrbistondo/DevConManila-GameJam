@@ -699,14 +699,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac7f2fd09916d1b40b35fc457c8e3cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wave: 1
+  wave: 50
   meleeEnemyPrefab: {fileID: 6980312190939295689, guid: 1a62a91ea046e734c9b32adb46574b02, type: 3}
   rangeEnemyPrefab: {fileID: 3806545884738903630, guid: 548d984205ff5dc4392116b9f6ccd6b2, type: 3}
   spawnLocations:
   - {fileID: 2094360638}
   - {fileID: 1836406187}
-  enemyPrefabs: []
-  totalSpawnTime: 30
+  enemyQueue: []
+  activeEnemies: []
+  canSpawnRemainingEnemies: 0
+  endWave: 0
+  maxNumOfEnemiesInScene: 0
+  totalSpawnTime: 5
   numOfMeleeEnemies: 0
   numOfRangeEnemies: 0
   addMeleeEnemies: 0
@@ -1383,7 +1387,7 @@ Transform:
   m_GameObject: {fileID: 1836406186}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: -4.5, z: 0}
+  m_LocalPosition: {x: 20, y: -4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1641,7 +1645,7 @@ Transform:
   m_GameObject: {fileID: 2094360637}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25, y: -4.5, z: 0}
+  m_LocalPosition: {x: -20, y: -4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

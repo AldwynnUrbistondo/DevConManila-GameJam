@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class SpawnManager : MonoBehaviour
 {
     public int wave = 1;
+    public TextMeshProUGUI waveText;
 
     [Header("Enemy Prefabs")]
     public GameObject meleeEnemyPrefab;
@@ -29,6 +31,7 @@ public class SpawnManager : MonoBehaviour
     public int addRangeEnemies;
 
     public float hpMultiplier = 0;
+    public float coinMultiplier = 0;
 
     private void Start()
     {
@@ -43,6 +46,12 @@ public class SpawnManager : MonoBehaviour
         {
             int randomLoc = Random.Range(0, spawnLocations.Length);
             GameObject enemy = Instantiate(enemyQueue[0], spawnLocations[randomLoc].position, Quaternion.identity);
+            Enemy enemyScript = enemy.GetComponent<Enemy>();
+            enemyScript.coinDrop = (int)(enemyScript.coinDrop * coinMultiplier);
+            enemyScript.maxHealth = enemyScript.maxHealth * hpMultiplier;
+            enemyScript.currentHealth = enemyScript.maxHealth;
+
+
             enemyQueue.RemoveAt(0);
             activeEnemies.Add(enemy);
 
@@ -66,6 +75,12 @@ public class SpawnManager : MonoBehaviour
             {
                 int randomLoc = Random.Range(0, spawnLocations.Length);
                 GameObject enemy = Instantiate(enemyQueue[0], spawnLocations[randomLoc].position, Quaternion.identity);
+                Enemy enemyScript = enemy.GetComponent<Enemy>();
+                enemyScript.coinDrop = (int)(enemyScript.coinDrop * coinMultiplier);
+                enemyScript.maxHealth = enemyScript.maxHealth * hpMultiplier;
+                enemyScript.currentHealth = enemyScript.maxHealth;
+
+
                 enemyQueue.RemoveAt(0);
                 activeEnemies.Add(enemy);
 
@@ -111,6 +126,7 @@ public class SpawnManager : MonoBehaviour
     {
         enemyQueue.Clear();
         wave++;
+        waveText.text = $"Wave: {wave}";
         CalculateEnemiesForWave(wave);
     }
 
@@ -121,7 +137,8 @@ public class SpawnManager : MonoBehaviour
         numOfRangeEnemies = 0;
         addMeleeEnemies = 1;
         addRangeEnemies = 1;
-        hpMultiplier = 0;
+        hpMultiplier = 1;
+        coinMultiplier = 1;
 
         // Calculate for each wave from 1 to current wave
         for (int w = 1; w <= currentWave; w++)
@@ -135,6 +152,7 @@ public class SpawnManager : MonoBehaviour
             if (w % 10 == 0)
             {
                 hpMultiplier += 0.5f;
+                coinMultiplier += 0.5f;
             }
             else
             {

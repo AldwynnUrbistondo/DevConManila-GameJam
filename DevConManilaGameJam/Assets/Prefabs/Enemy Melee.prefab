@@ -320,11 +320,12 @@ MonoBehaviour:
   playerPos: {fileID: 0}
   rb: {fileID: 0}
   spriteRenderer: {fileID: 0}
-  currentHealth: 15
-  maxHealth: 15
+  currentHealth: 10
+  maxHealth: 10
   isDying: 0
   isFrozen: 0
-  moveSpeed: 4
+  moveSpeed: 3
+  coinDrop: 3
   isFacingRight: 1
   healthBarCanvas: {fileID: 2392421372502767341}
   attackDistance: 2

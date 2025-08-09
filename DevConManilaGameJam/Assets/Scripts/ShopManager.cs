@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ShopManager : MonoBehaviour
 {
     public int coins;
+    public TextMeshProUGUI coinsText;
 
     [Header("Buttons")]
     public Button healthButton;
@@ -57,6 +58,7 @@ public class ShopManager : MonoBehaviour
     private void Start()
     {
         InitialValue();
+        UpdateButtonState();
     }
 
     private void InitialValue()
@@ -89,7 +91,33 @@ public class ShopManager : MonoBehaviour
 
     public void UpdateButtonState()
     {
+        coinsText.text = $"Credits: {coins}";
 
+
+        healthButton.interactable = coins >= healthPrice;
+        healthRegenButton.interactable = coins >= healthRegenPrice;
+        damageButton.interactable = coins >= damagePrice;
+        critDamageButton.interactable = coins >= critDamagePrice;
+        critRateButton.interactable = coins >= critRatePrice;
+        attackSpeedButton.interactable = coins >= attackSpeedPrice;
+
+        laserPetButton.interactable = coins >= laserPetPrice;
+        cryoPetButton.interactable = coins >= cryoPetPrice;
+        energyWavePetButton.interactable = coins >= energyWavePetPrice;
+
+
+
+        healthPriceText.text = healthPrice.ToString();
+        healthRegenPriceText.text = healthRegenPrice.ToString();
+        damagePriceText.text = damagePrice.ToString();
+        critDamagePriceText.text = critDamagePrice.ToString();
+        critRatePriceText.text = critRatePrice.ToString();
+        attackSpeedPriceText.text = attackSpeedPrice.ToString();
+
+        laserPetPriceText.text = laserPetPrice.ToString();
+        cryoPetPriceText.text = cryoPetPrice.ToString();
+        energyWavePetPriceText.text = energyWavePetPrice.ToString();
     }
+
 
 }

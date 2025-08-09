@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour, IDamageable
     public bool isFrozen = false;
 
     public float moveSpeed = 2;
+    public int coinDrop;
+
     [HideInInspector] public bool isFacingRight = true;
 
     public Transform healthBarCanvas;
@@ -60,7 +62,11 @@ public class Enemy : MonoBehaviour, IDamageable
     public IEnumerator StartDie()
     {
         Collider2D col = GetComponent<Collider2D>();
-        if(col != null)
+        ShopManager shop = FindAnyObjectByType<ShopManager>();
+        shop.coins += coinDrop;
+        shop.UpdateButtonState();
+
+        if (col != null)
         {
             col.enabled = false;
         }

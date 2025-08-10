@@ -5,7 +5,7 @@ public class EnemyProjectile : Projectile
     public Vector2 direction;
     public override void Shoot()
     {
-        //Vector2 direction = (target.position - transform.position).normalized;
+        /*Vector2 direction = (target.position - transform.position).normalized;
 
         direction.y = 0;
         direction = direction.normalized;
@@ -14,7 +14,7 @@ public class EnemyProjectile : Projectile
         {
             direction = Vector2.right;
         }
-
+        */
         rb.linearVelocity = direction * 10;
     }
 

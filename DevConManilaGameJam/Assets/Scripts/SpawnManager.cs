@@ -37,6 +37,7 @@ public class SpawnManager : MonoBehaviour
     {
         CalculateEnemiesForWave(wave);
         StartWave();
+        waveText.text = $"Wave: {wave}";
     }
 
     IEnumerator SpawnEnemies()

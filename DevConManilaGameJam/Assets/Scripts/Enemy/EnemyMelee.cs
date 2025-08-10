@@ -13,7 +13,7 @@ public class EnemyMelee : Enemy
 
     public override void Update()
     {
-        base .Update();
+        base.Update();
 
         if (isFacingRight)
         {

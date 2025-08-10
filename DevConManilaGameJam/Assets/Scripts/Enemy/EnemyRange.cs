@@ -12,11 +12,38 @@ public class EnemyRange : Enemy
         attackDistance = Random.Range(3f, 5f);
     }
 
+    public override void Update()
+    {
+        base.Update();
+
+        if (isFacingRight)
+        {
+            Debug.DrawRay(transform.position, transform.right * attackDistance, Color.white);
+
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, -transform.right * attackDistance, Color.white);
+        }
+    }
+
     public override bool TargetInRange()
     {
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, attackDistance, LayerMask.GetMask("Player"));
-        return hit;
+        if (isFacingRight)
+        {
+            targetRay = Physics2D.Raycast(transform.position, transform.right, attackDistance, LayerMask.GetMask("Player"));
+        }
+        else
+        {
+            targetRay = Physics2D.Raycast(transform.position, -transform.right, attackDistance, LayerMask.GetMask("Player"));
+        }
 
+        if (targetRay.collider != null)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     public override IEnumerator AttackTarget()
@@ -27,6 +54,7 @@ public class EnemyRange : Enemy
         //yield return new WaitForSeconds(attackLandingTime);
         if (targetRay.collider != null)
         {
+
             GameObject prj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             EnemyProjectile prjScript = prj.GetComponent<EnemyProjectile>();
             prjScript.damage = damage;
@@ -38,6 +66,7 @@ public class EnemyRange : Enemy
             {
                 prjScript.direction = -Vector2.right;
             }
+            prjScript.Shoot();
         }
         //yield return new WaitForSeconds(animationRemainingTime);
         yield return new WaitForSeconds(2);
@@ -45,8 +74,4 @@ public class EnemyRange : Enemy
         isAttacking = false;
     }
 
-    public void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position, attackDistance);
-    }
 }

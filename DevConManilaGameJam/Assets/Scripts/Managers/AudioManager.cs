@@ -15,7 +15,9 @@ public enum SoundType
     PlayerDeath,
     EnemyDeath,
     PetSpawn,
+    OpenShop,
     ButtonClick,
+    ButtonBuy,
     Clock
 }
 public class AudioManager : MonoBehaviour
@@ -33,7 +35,9 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource playerSpawnSound;
     public AudioSource petSpawnSound;
+    public AudioSource openShop;
     public AudioSource buttonClickSound;
+    public AudioSource buttonBuySound;
 
     public void PlaySound(SoundType soundType)
     {
@@ -81,8 +85,17 @@ public class AudioManager : MonoBehaviour
                 break;
 
             // = = = = = = = = Single Channel = = = = = = = = 
+
+            case SoundType.OpenShop:
+                openShop.Play();
+                break;
+
             case SoundType.ButtonClick:
                 buttonClickSound.Play();
+                break;
+
+            case SoundType.ButtonBuy:
+                buttonBuySound.Play();
                 break;
 
             case SoundType.PlayerSpawn:

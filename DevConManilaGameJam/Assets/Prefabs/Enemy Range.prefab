@@ -249,13 +249,16 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   currentHealth: 10
   maxHealth: 10
+  damage: 1
   isDying: 0
+  isAttacking: 0
   isFrozen: 0
   moveSpeed: 3
   coinDrop: 3
   isFacingRight: 1
   healthBarCanvas: {fileID: 0}
   attackDistance: 5
+  projectilePrefab: {fileID: 5820363148425120631, guid: 9ad9346b83defcc469217ba0c7f71037, type: 3}
 --- !u!1 &4040650666681801882
 GameObject:
   m_ObjectHideFlags: 0

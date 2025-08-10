@@ -322,7 +322,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   currentHealth: 10
   maxHealth: 10
+  damage: 2
   isDying: 0
+  isAttacking: 0
   isFrozen: 0
   moveSpeed: 3
   coinDrop: 3

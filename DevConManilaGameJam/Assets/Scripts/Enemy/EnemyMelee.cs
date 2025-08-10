@@ -3,7 +3,6 @@ using System.Collections;
 
 public class EnemyMelee : Enemy
 {
-    RaycastHit2D targetRay;
     public float attackDistance;
 
     public override void Start()
@@ -48,6 +47,29 @@ public class EnemyMelee : Enemy
 
     public override IEnumerator AttackTarget()
     {
-        yield return null;
+        //float animationRemainingTime = attackClip.length - attackLandingTime;
+        // anim.Play("Attack");
+
+        //yield return new WaitForSeconds(attackLandingTime);
+
+        Debug.Log("Start Attack");
+
+        if (targetRay.collider != null)
+        {
+            Debug.Log("Collider Detected");
+
+            PlayerStats playerStats = targetRay.collider.GetComponent<PlayerStats>();
+            if (playerStats != null)
+            {
+                Debug.Log("Script Found");
+                playerStats.TakeDamage(damage);
+                Debug.Log("Attack Success");
+
+            }
+        }
+        //yield return new WaitForSeconds(animationRemainingTime);
+        yield return new WaitForSeconds(2);
+
+        isAttacking = false;
     }
 }

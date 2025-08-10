@@ -6,9 +6,9 @@ public enum SoundType
 {
     PlayerSpawn,
     PlayerProjectile,
-    LightDragonProjectile,
-    IceDragonProjectile,
-    WindDragonProjectile,
+    LaserProjectile,
+    CryoProjectile,
+    EnergyWaveProjectile,
     PlayerHitEnemy,
     PlayerWalk,
     EnemyHitPlayer,
@@ -18,7 +18,8 @@ public enum SoundType
     OpenShop,
     ButtonClick,
     ButtonBuy,
-    Clock
+    Clock,
+    TimeStop,
 }
 public class AudioManager : MonoBehaviour
 {
@@ -26,9 +27,9 @@ public class AudioManager : MonoBehaviour
     public AudioSource[] playerHitEnemySound;
     public AudioSource[] playerDeathSound;
     public AudioSource[] playerWalkSound;
-    public AudioSource[] lightDragonProjectileSound;
-    public AudioSource[] iceDragonProjectileSound;
-    public AudioSource[] windDragonProjectileSound;
+    public AudioSource[] laserProjectileSound;
+    public AudioSource[] cryoProjectileSound;
+    public AudioSource[] energyWaveProjectileSound;
     public AudioSource[] enemyHitPlayerSound;
     public AudioSource[] enemyDeathSound;
     public AudioSource[] clockSound;
@@ -38,6 +39,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource openShop;
     public AudioSource buttonClickSound;
     public AudioSource buttonBuySound;
+    public AudioSource timeStop;
 
     public void PlaySound(SoundType soundType)
     {
@@ -60,16 +62,16 @@ public class AudioManager : MonoBehaviour
                 AudioPlay(playerDeathSound);
                 break;
 
-            case SoundType.LightDragonProjectile:
-                AudioPlay(lightDragonProjectileSound);
+            case SoundType.LaserProjectile:
+                AudioPlay(laserProjectileSound);
                 break;
 
-            case SoundType.IceDragonProjectile:
-                AudioPlay(iceDragonProjectileSound);
+            case SoundType.CryoProjectile:
+                AudioPlay(cryoProjectileSound);
                 break;
 
-            case SoundType.WindDragonProjectile:
-                AudioPlay(windDragonProjectileSound);
+            case SoundType.EnergyWaveProjectile:
+                AudioPlay(energyWaveProjectileSound);
                 break;
 
             case SoundType.EnemyHitPlayer:
@@ -104,6 +106,10 @@ public class AudioManager : MonoBehaviour
 
             case SoundType.PetSpawn:
                 petSpawnSound.Play();
+                break;
+
+            case SoundType.TimeStop:
+                timeStop.Play();
                 break;
 
         }

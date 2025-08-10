@@ -3,7 +3,6 @@ using System.Collections;
 
 public class EnemyMelee : Enemy
 {
-    RaycastHit2D targetRay;
     public float attackDistance;
 
     public override void Start()
@@ -14,7 +13,7 @@ public class EnemyMelee : Enemy
 
     public override void Update()
     {
-        base .Update();
+        base.Update();
 
         if (isFacingRight)
         {
@@ -48,6 +47,24 @@ public class EnemyMelee : Enemy
 
     public override IEnumerator AttackTarget()
     {
-        yield return null;
+        //float animationRemainingTime = attackClip.length - attackLandingTime;
+        // anim.Play("Attack");
+
+        //yield return new WaitForSeconds(attackLandingTime);
+
+        if (targetRay.collider != null)
+        {
+
+            PlayerStats playerStats = targetRay.collider.GetComponent<PlayerStats>();
+            if (playerStats != null)
+            {
+                playerStats.TakeDamage(damage);
+
+            }
+        }
+        //yield return new WaitForSeconds(animationRemainingTime);
+        yield return new WaitForSeconds(2);
+
+        isAttacking = false;
     }
 }

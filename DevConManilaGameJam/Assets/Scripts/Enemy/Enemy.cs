@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour, IDamageable
     [HideInInspector] public Transform playerPos;
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public SpriteRenderer spriteRenderer;
+    [HideInInspector] public RaycastHit2D targetRay;
 
     public float currentHealth;
     public float maxHealth;

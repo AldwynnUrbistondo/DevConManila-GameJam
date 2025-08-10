@@ -256,7 +256,7 @@ MonoBehaviour:
   moveSpeed: 3
   coinDrop: 3
   isFacingRight: 1
-  healthBarCanvas: {fileID: 0}
+  healthBarCanvas: {fileID: 5358946469738679944}
   attackDistance: 5
   projectilePrefab: {fileID: 5820363148425120631, guid: 9ad9346b83defcc469217ba0c7f71037, type: 3}
 --- !u!1 &4040650666681801882

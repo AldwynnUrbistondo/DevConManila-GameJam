@@ -56,18 +56,17 @@ public class PlayerStats : MonoBehaviour
 
     public void UpdateStats()
     {
-
-        playerAttack.fireRate = attackSpeed;
-        playerAttack.damage = damage;
-        playerAttack.critRate = critRate;
-        playerAttack.critDamage = critDamage;
-
         HealthCalculation();
         RegenCalculation();
         DamageCalculation();
         CritDamageCalculation();
         CritRateCalculation();
         AttackSpeedCalculation();
+
+        playerAttack.fireRate = attackSpeed;
+        playerAttack.damage = damage;
+        playerAttack.critRate = critRate;
+        playerAttack.critDamage = critDamage;
 
         maxHealthText.text = $"Health: {maxHealth}";
         healthRegenText.text = $"HP Regen: {healthRegen:F2}/s";

@@ -8,6 +8,9 @@ public class ShopManager : MonoBehaviour
     public int coins;
     public TextMeshProUGUI coinsText;
     public PlayerStats playerStats;
+    public PetStats laserPetStats;
+    public PetStats cryoPetStats;
+    public PetStats energyWavePetStats;
 
     [Header("Buttons")]
     public Button healthButton;
@@ -240,7 +243,15 @@ public class ShopManager : MonoBehaviour
             coins -= laserPetPrice;
             laserPetLevel++;
             UpdateButtonState();
-            playerStats.UpdateStats();
+            if (laserPetLevel > 1)
+            {
+                laserPetStats.UpdateStats();
+            }
+            else
+            {
+                laserPetStats.gameObject.SetActive(true);
+            }
+           
         }
     }
 
@@ -251,7 +262,14 @@ public class ShopManager : MonoBehaviour
             coins -= cryoPetPrice;
             cryoPetLevel++;
             UpdateButtonState();
-            playerStats.UpdateStats();
+            if (cryoPetLevel > 1)
+            {
+                cryoPetStats.UpdateStats();
+            }
+            else
+            {
+                cryoPetStats.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -262,8 +280,31 @@ public class ShopManager : MonoBehaviour
             coins -= energyWavePetPrice;
             energyWavePetLevel++;
             UpdateButtonState();
-            playerStats.UpdateStats();
+            if (energyWavePetLevel > 1)
+            {
+                energyWavePetStats.UpdateStats();
+            }
+            else
+            {
+                energyWavePetStats.gameObject.SetActive(true);
+            }
         }
     }
     #endregion
+
+    public int PetLevel(PetType type)
+    {
+        if (type == PetType.Laser)
+        {
+            return laserPetLevel;
+        }
+        else if (type == PetType.Cryo)
+        {
+            return cryoPetLevel;
+        }
+        else
+        {
+            return energyWavePetLevel;
+        }
+    }
 }

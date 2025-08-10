@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class EnemyMelee : Enemy
 {
@@ -13,24 +14,7 @@ public class EnemyMelee : Enemy
 
     public override void Update()
     {
-        if (!TargetInRange())
-        {
-            Vector2 direction = (playerPos.position - transform.position).normalized;
-            if (!isFrozen)
-            {
-                rb.linearVelocity = new Vector2(direction.x * moveSpeed, 0);
-            }
-            else
-            {
-                rb.linearVelocity = new Vector2(direction.x * (moveSpeed / 2), 0);
-            }
-
-            Flip(direction);
-        }
-        else
-        {
-            rb.linearVelocity = Vector2.zero;
-        }
+        base .Update();
 
         if (isFacingRight)
         {
@@ -43,7 +27,7 @@ public class EnemyMelee : Enemy
         }
     }
 
-    public bool TargetInRange()
+    public override bool TargetInRange()
     {
         if (isFacingRight)
         {
@@ -60,5 +44,10 @@ public class EnemyMelee : Enemy
         }
 
         return false;
+    }
+
+    public override IEnumerator AttackTarget()
+    {
+        yield return null;
     }
 }

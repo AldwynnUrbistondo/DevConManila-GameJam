@@ -1106,8 +1106,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 70, y: -105}
-  m_SizeDelta: {x: 119.5686, y: 39.946106}
+  m_AnchoredPosition: {x: 108, y: -90}
+  m_SizeDelta: {x: 170.907, y: 39.9461}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &314688031
 MonoBehaviour:
@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1772,6 +1772,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 476569396}
   m_CullTransparentMesh: 1
+--- !u!1 &534487954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 534487956}
+  - component: {fileID: 534487955}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &534487955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534487954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da6c6a08f2ea9f4fb4d55e2885f8c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 1811713159}
+  healthBarPanel: {fileID: 1209600865}
+  lerpTimer: 0
+  chipSpeed: 0.5
+  frontHealthBar: {fileID: 736117479}
+  backHealthBar: {fileID: 1150263680}
+--- !u!4 &534487956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534487954}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 302.9409, y: 226.3973, z: -2.285119}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &582278658
 GameObject:
   m_ObjectHideFlags: 0
@@ -5375,6 +5425,8 @@ MonoBehaviour:
   attackSpeedText: {fileID: 1385079095}
   playerAttack: {fileID: 0}
   shop: {fileID: 0}
+  hpToRegen: 0
+  isPlayerDead: 0
 --- !u!1 &1819896209
 GameObject:
   m_ObjectHideFlags: 0
@@ -6295,6 +6347,7 @@ RectTransform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 534487956}
   - {fileID: 258479839}
   - {fileID: 711723741}
   - {fileID: 1811713156}

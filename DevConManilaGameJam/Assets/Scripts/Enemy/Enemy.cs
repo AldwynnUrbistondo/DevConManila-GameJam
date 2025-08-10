@@ -9,7 +9,9 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public float currentHealth;
     public float maxHealth;
-    public bool isDying;
+    public float damage;
+    public bool isDying = false;
+    public bool isAttacking = false;
 
     public bool isFrozen = false;
 
@@ -29,17 +31,31 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public virtual void Update()
     {
-        Vector2 direction = (playerPos.position - transform.position).normalized;
-        if (!isFrozen)
+        if (!TargetInRange())
         {
-            rb.linearVelocity = new Vector2(direction.x * moveSpeed, 0);
+            Vector2 direction = (playerPos.position - transform.position).normalized;
+            if (!isFrozen)
+            {
+                rb.linearVelocity = new Vector2(direction.x * moveSpeed, 0);
+            }
+            else
+            {
+                rb.linearVelocity = new Vector2(direction.x * (moveSpeed / 2), 0);
+            }
+
+            Flip(direction);
         }
         else
         {
-            rb.linearVelocity = new Vector2(direction.x * (moveSpeed/2), 0);
+            rb.linearVelocity = Vector2.zero;
         }
 
-        Flip(direction);
+        if (!isAttacking && TargetInRange())
+        {
+            isAttacking = true;
+            StartCoroutine(AttackTarget());
+        }
+
     }
 
     #region TakeDamage and Die
@@ -56,7 +72,12 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public void Die()
     {
-        StartCoroutine(StartDie());
+        if (!isDying)
+        {
+            isDying = true;
+            StartCoroutine(StartDie());
+        }
+        
     }
 
     public IEnumerator StartDie()
@@ -92,6 +113,16 @@ public class Enemy : MonoBehaviour, IDamageable
                 healthBarCanvas.localScale = childScale;
             }
         }
+    }
+
+    public virtual bool TargetInRange()
+    {
+        return false;
+    }
+
+    public virtual IEnumerator AttackTarget()
+    {
+        yield return null;
     }
 
 }

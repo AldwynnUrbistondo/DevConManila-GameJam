@@ -33,6 +33,9 @@ public class PlayerStats : MonoBehaviour
     public PlayerAttack playerAttack;
     public ShopManager shop;
 
+    public float hpToRegen = 0;
+    public bool isPlayerDead = false;
+
     private void Awake()
     {
         playerAttack = GetComponent<PlayerAttack>();
@@ -41,7 +44,34 @@ public class PlayerStats : MonoBehaviour
         UpdateStats();
     }
 
+    public void TakeDamage(float damage)
+    {
+        if (!isPlayerDead)
+        {
+            currentHealth -= damage;
+        }
+        if (currentHealth < 0)
+        {
+            isPlayerDead = true;
+            currentHealth = 0;
+        }
 
+    }
+
+    public void RegenHP()
+    {
+        if (!isPlayerDead)
+        {
+            hpToRegen += healthRegen * Time.deltaTime;
+            if (hpToRegen >= 1)
+            {
+                currentHealth++;
+                hpToRegen--;
+            }
+        }
+    }
+
+    #region Stats Calculation
     private void InitialValue()
     {
         maxHealth = 20;
@@ -135,4 +165,5 @@ public class PlayerStats : MonoBehaviour
         }
         attackSpeed = stat;
     }
+    #endregion
 }

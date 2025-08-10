@@ -3,6 +3,15 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    [Header("Initial Stats")]
+    public float initialMaxHealth;
+    public float initialHealthRegen;
+    public float initialDamage;
+    public float initialCritDamage;
+
+    public float initialCritRate;
+    public float initialAttackSpeed;
+
     [Header("Stats")]
     public float maxHealth;
     public float currentHealth;
@@ -44,6 +53,11 @@ public class PlayerStats : MonoBehaviour
         UpdateStats();
     }
 
+    private void Update()
+    {
+        RegenHP();
+    }
+
     public void TakeDamage(float damage)
     {
         if (!isPlayerDead)
@@ -60,7 +74,7 @@ public class PlayerStats : MonoBehaviour
 
     public void RegenHP()
     {
-        if (!isPlayerDead)
+        if (!isPlayerDead && currentHealth < maxHealth)
         {
             hpToRegen += healthRegen * Time.deltaTime;
             if (hpToRegen >= 1)
@@ -74,13 +88,13 @@ public class PlayerStats : MonoBehaviour
     #region Stats Calculation
     private void InitialValue()
     {
-        maxHealth = 20;
+        maxHealth = initialMaxHealth;
         currentHealth = maxHealth;
-        healthRegen = 1;
-        damage = 1;
-        critDamage = 0;
-        critRate = 0;
-        attackSpeed = 0.5f;
+        healthRegen = initialHealthRegen;
+        damage = initialDamage;
+        critDamage = initialCritDamage;
+        critRate = initialCritRate;
+        attackSpeed = initialAttackSpeed;
 
     }
 
@@ -108,7 +122,7 @@ public class PlayerStats : MonoBehaviour
 
     public void HealthCalculation()
     {
-        float stat = 20;
+        float stat = initialMaxHealth;
         for (int i = 1; i < shop.healthLevel; i++)
         {
             stat += Mathf.Round(stat * maxHealthScale);
@@ -118,7 +132,7 @@ public class PlayerStats : MonoBehaviour
 
     public void RegenCalculation()
     {
-        float stat = 1;
+        float stat = initialHealthRegen;
         for (int i = 1; i < shop.healthRegenLevel; i++)
         {
             stat += Mathf.Round(stat * healthRegenScale * 100f) / 100f;
@@ -128,7 +142,7 @@ public class PlayerStats : MonoBehaviour
 
     public void DamageCalculation()
     {
-        float stat = 1;
+        float stat = initialDamage;
         for (int i = 1; i < shop.damageLevel; i++)
         {
             stat += Mathf.Round(stat * damageScale * 10) / 10;
@@ -138,7 +152,7 @@ public class PlayerStats : MonoBehaviour
 
     public void CritDamageCalculation()
     {
-        float stat = 0;
+        float stat = initialCritDamage;
         for (int i = 1; i < shop.critDamageLevel; i++)
         {
             stat += critDamageScale;
@@ -148,7 +162,7 @@ public class PlayerStats : MonoBehaviour
 
     public void CritRateCalculation()
     {
-        float stat = 0;
+        float stat = initialCritRate;
         for (int i = 1; i < shop.critRateLevel; i++)
         {
             stat += critRateScale;
@@ -158,7 +172,7 @@ public class PlayerStats : MonoBehaviour
 
     public void AttackSpeedCalculation()
     {
-        float stat = 0.5f;
+        float stat = initialAttackSpeed;
         for (int i = 1; i < shop.attackSpeedLevel; i++)
         {
             stat -= attackSpeedScale;

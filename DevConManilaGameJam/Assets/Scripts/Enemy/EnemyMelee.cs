@@ -52,18 +52,13 @@ public class EnemyMelee : Enemy
 
         //yield return new WaitForSeconds(attackLandingTime);
 
-        Debug.Log("Start Attack");
-
         if (targetRay.collider != null)
         {
-            Debug.Log("Collider Detected");
 
             PlayerStats playerStats = targetRay.collider.GetComponent<PlayerStats>();
             if (playerStats != null)
             {
-                Debug.Log("Script Found");
                 playerStats.TakeDamage(damage);
-                Debug.Log("Attack Success");
 
             }
         }

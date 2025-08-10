@@ -5404,6 +5404,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f131c375fc9434fb8b80fed5be3c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialMaxHealth: 20
+  initialHealthRegen: 0.25
+  initialDamage: 1
+  initialCritDamage: 0
+  initialCritRate: 0
+  initialAttackSpeed: 0.5
   maxHealth: 0
   currentHealth: 0
   healthRegen: 0.5

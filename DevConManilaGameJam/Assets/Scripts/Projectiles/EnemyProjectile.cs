@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyProjectile : Projectile
 {
-    public Vector2 direction;
+    //public Vector2 direction;
     public override void Shoot()
     {
         /*Vector2 direction = (target.position - transform.position).normalized;

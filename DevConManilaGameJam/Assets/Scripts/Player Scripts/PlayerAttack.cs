@@ -43,7 +43,15 @@ public class PlayerAttack : ShooterScript
 
         GameObject prj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         Projectile prjScript = prj.GetComponent<Projectile>();
-        prjScript.target = mouseTransform;
+        if (playerMovement.isFacingRight)
+        {
+            prjScript.direction = Vector2.right;
+        }
+        else
+        {
+            prjScript.direction = -Vector2.right;
+        }
+       
         prjScript.damage = finalDamage;
         prjScript.Shoot();
 

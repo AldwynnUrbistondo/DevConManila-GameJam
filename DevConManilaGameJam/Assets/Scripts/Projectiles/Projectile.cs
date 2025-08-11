@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
     public Rigidbody2D rb;
     public Transform target;
     public float damage;
+    public Vector2 direction;
 
     public virtual void Awake()
     {
@@ -15,7 +16,11 @@ public class Projectile : MonoBehaviour
 
     public virtual void Shoot()
     {
-        Vector2 direction = (target.position - transform.position).normalized;
+        if (target != null)
+        {
+            direction = (target.position - transform.position).normalized;
+        }
+        
         rb.linearVelocity = direction * 25;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

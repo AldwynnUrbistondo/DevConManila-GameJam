@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     public float movementSpeed;
-    bool isFacingRight;
+    public bool isFacingRight;
 
     private void Start()
     {
@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
             GameManager.canPetShoot = true;
         }
 
-        Flip(-rb.linearVelocity);
+        Flip(rb.linearVelocity);
         
     }
 

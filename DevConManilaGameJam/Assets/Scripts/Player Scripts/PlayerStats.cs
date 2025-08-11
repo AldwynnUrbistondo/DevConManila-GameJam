@@ -49,8 +49,13 @@ public class PlayerStats : MonoBehaviour
     {
         playerAttack = GetComponent<PlayerAttack>();
         shop = FindAnyObjectByType<ShopManager>();
-        InitialValue();
+        //InitialValue();
         UpdateStats();
+    }
+
+    private void Start()
+    {
+        currentHealth = maxHealth;
     }
 
     private void Update()
@@ -112,12 +117,12 @@ public class PlayerStats : MonoBehaviour
         playerAttack.critRate = critRate;
         playerAttack.critDamage = critDamage;
 
-        maxHealthText.text = $"Health: {maxHealth}";
-        healthRegenText.text = $"HP Regen: {healthRegen:F2}/s";
-        damageText.text = $"Damage: {damage:F1}";
-        critDamageText.text = $"Crit Dmg: {critDamage}";
-        critRateText.text = $"Crit Rate: {critRate}%";
-        attackSpeedText.text = $"Atk Spd: {attackSpeed:F3}/s";
+        maxHealthText.text = $"Health:\n{maxHealth}";
+        healthRegenText.text = $"HP Regen:\n{healthRegen:F2}/s";
+        damageText.text = $"Damage:\n{damage:F1}";
+        critDamageText.text = $"Crit Dmg:\n{critDamage}";
+        critRateText.text = $"Crit Rate:\n{critRate}%";
+        attackSpeedText.text = $"Atk Spd:\n{attackSpeed:F3}/s";
     }
 
     public void HealthCalculation()
@@ -125,7 +130,7 @@ public class PlayerStats : MonoBehaviour
         float stat = initialMaxHealth;
         for (int i = 1; i < shop.healthLevel; i++)
         {
-            stat += Mathf.Round(stat * maxHealthScale);
+            stat += maxHealthScale;
         }
         maxHealth = stat;
     }

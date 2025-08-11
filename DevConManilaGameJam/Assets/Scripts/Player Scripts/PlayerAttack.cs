@@ -3,7 +3,13 @@ using UnityEngine;
 public class PlayerAttack : ShooterScript
 {
     public Transform mouseTransform;
+    public PlayerMovement playerMovement;
 
+    public override void Start()
+    {
+        base.Start();
+        playerMovement = GetComponent<PlayerMovement>();
+    }
 
     public override void Update()
     {
@@ -13,11 +19,20 @@ public class PlayerAttack : ShooterScript
         mouseTransform.position = mousePos;
 
 
-        fireInterval += Time.deltaTime;
-        if (fireInterval >= fireRate && Input.GetMouseButton(0) && !GameManager.isPaused && GameManager.canMove) 
+        if (!GameManager.isPaused && GameManager.canShoot) 
         {
-            ShootEnemy(damage);
-            fireInterval = 0;
+            fireInterval += Time.deltaTime;
+            if (fireInterval >= fireRate && Input.GetMouseButton(0))
+            {
+                ShootEnemy(damage);
+                fireInterval = 0;
+                GameManager.canMove = false;
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                GameManager.canMove = true;
+            }
+            
         }
 
     }

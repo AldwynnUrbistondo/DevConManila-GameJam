@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public virtual void Update()
     {
-        if (!TargetInRange())
+        if (!TargetInRange() && !isAttacking)
         {
             Vector2 direction = (playerPos.position - transform.position).normalized;
             if (!isFrozen)

@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     public static bool isContinueGame;
     public static bool isPaused;
     public static bool canMove;
+    public static bool canShoot;
+    public static bool canPetShoot = true;
 
     void Start()
     {
@@ -140,6 +142,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         isPaused = true;
         canMove = false;
+        canShoot = false;
     }
 
     public static void UnPauseGame()
@@ -147,5 +150,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         isPaused = false;
         canMove = true;
+        canShoot = true;
     }
 }

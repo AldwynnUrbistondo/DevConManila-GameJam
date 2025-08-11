@@ -74,29 +74,24 @@ public class ShopManager : MonoBehaviour
 
     private void Start()
     {
-        coins = PlayerPrefs.GetInt("Credits", coins);
+        LoadData();
 
         playerStats = FindAnyObjectByType<PlayerStats>();
         SetButtonFunctions();
-        InitialValue();
         UpdatePrices(); // Calculate initial prices
         UpdateButtonState();
+        playerStats.UpdateStats();
+
+        laserPetStats.gameObject.SetActive(laserPetLevel >= 1);
+        cryoPetStats.gameObject.SetActive(cryoPetLevel >= 1);
+        energyWavePetStats.gameObject.SetActive(energyWavePetLevel >= 1);  
+
+        laserPetStats.UpdateStats();
+        cryoPetStats.UpdateStats();
+        energyWavePetStats.UpdateStats();
+
     }
 
-    private void InitialValue()
-    {
-        // Levels
-        healthLevel = 1;
-        healthRegenLevel = 1;
-        damageLevel = 1;
-        critDamageLevel = 1;
-        critRateLevel = 1;
-        attackSpeedLevel = 1;
-
-        laserPetLevel = 0;
-        cryoPetLevel = 0;
-        energyWavePetLevel = 0;
-    }
 
     // Calculate all current upgrade prices
     private void UpdatePrices()
@@ -164,13 +159,13 @@ public class ShopManager : MonoBehaviour
     // Shared price calculation
     private int CalculatePrice(int basePrice, int level, float increasePercent)
     {
-        int price = basePrice;
+        float price = basePrice;
         for (int i = 0; i < level; i++)
         {
-            price += (int)(price * increasePercent);
+            price += price * increasePercent;
         }
         //price = (int)(Math.Round(price / 5.0) * 5);
-        return price;
+        return (int)price;
     }
 
     public void HealthUpgrade()
@@ -179,6 +174,7 @@ public class ShopManager : MonoBehaviour
         {
             coins -= healthPrice;
             healthLevel++;
+            PlayerPrefs.SetInt("Health Level", healthLevel);
             UpdateButtonState();
             playerStats.UpdateStats();
         }
@@ -190,6 +186,7 @@ public class ShopManager : MonoBehaviour
         {
             coins -= healthRegenPrice;
             healthRegenLevel++;
+            PlayerPrefs.SetInt("Health Regen Level", healthRegenLevel);
             UpdateButtonState();
             playerStats.UpdateStats();
         }
@@ -201,6 +198,7 @@ public class ShopManager : MonoBehaviour
         {
             coins -= damagePrice;
             damageLevel++;
+            PlayerPrefs.SetInt("Damage Level", damageLevel);
             UpdateButtonState();
             playerStats.UpdateStats();
         }
@@ -212,6 +210,7 @@ public class ShopManager : MonoBehaviour
         {
             coins -= critDamagePrice;
             critDamageLevel++;
+            PlayerPrefs.SetInt("Crit Damage Level", critDamageLevel);
             UpdateButtonState();
             playerStats.UpdateStats();
         }
@@ -223,6 +222,7 @@ public class ShopManager : MonoBehaviour
         {
             coins -= critRatePrice;
             critRateLevel++;
+            PlayerPrefs.SetInt("Crit Rate Level", critRateLevel);
             UpdateButtonState();
             playerStats.UpdateStats();
         }
@@ -234,6 +234,7 @@ public class ShopManager : MonoBehaviour
         {
             coins -= attackSpeedPrice;
             attackSpeedLevel++;
+            PlayerPrefs.SetInt("Attack Speed Level", attackSpeedLevel);
             UpdateButtonState();
             playerStats.UpdateStats();
         }
@@ -245,6 +246,7 @@ public class ShopManager : MonoBehaviour
         {
             coins -= laserPetPrice;
             laserPetLevel++;
+            PlayerPrefs.SetInt("Laser Pet Level", laserPetLevel);
             UpdateButtonState();
             if (laserPetLevel > 1)
             {
@@ -254,7 +256,6 @@ public class ShopManager : MonoBehaviour
             {
                 laserPetStats.gameObject.SetActive(true);
             }
-           
         }
     }
 
@@ -264,6 +265,7 @@ public class ShopManager : MonoBehaviour
         {
             coins -= cryoPetPrice;
             cryoPetLevel++;
+            PlayerPrefs.SetInt("Cryo Pet Level", cryoPetLevel);
             UpdateButtonState();
             if (cryoPetLevel > 1)
             {
@@ -282,6 +284,7 @@ public class ShopManager : MonoBehaviour
         {
             coins -= energyWavePetPrice;
             energyWavePetLevel++;
+            PlayerPrefs.SetInt("Energy Wave Pet Level", energyWavePetLevel);
             UpdateButtonState();
             if (energyWavePetLevel > 1)
             {
@@ -293,6 +296,7 @@ public class ShopManager : MonoBehaviour
             }
         }
     }
+
     #endregion
 
     public int PetLevel(PetType type)
@@ -309,5 +313,22 @@ public class ShopManager : MonoBehaviour
         {
             return energyWavePetLevel;
         }
+    }
+
+    public void LoadData()
+    {
+        coins = PlayerPrefs.GetInt("Credits", coins);
+
+        healthLevel = PlayerPrefs.GetInt("Health Level");
+        healthRegenLevel = PlayerPrefs.GetInt("Health Regen Level");
+        damageLevel = PlayerPrefs.GetInt("Damage Level");
+        critDamageLevel = PlayerPrefs.GetInt("Crit Damage Level");
+        critRateLevel = PlayerPrefs.GetInt("Crit Rate Level");
+        attackSpeedLevel = PlayerPrefs.GetInt("Attack Speed Level");
+
+        laserPetLevel = PlayerPrefs.GetInt("Laser Pet Level");
+        cryoPetLevel = PlayerPrefs.GetInt("Cryo Pet Level");
+        energyWavePetLevel = PlayerPrefs.GetInt("Energy Wave Pet Level");
+
     }
 }

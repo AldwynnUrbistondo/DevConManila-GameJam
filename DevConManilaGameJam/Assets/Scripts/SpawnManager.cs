@@ -5,12 +5,14 @@ using TMPro;
 
 public class SpawnManager : MonoBehaviour
 {
+    public GameManager gameManager;
     public int wave;
     public TextMeshProUGUI waveText;
 
     [Header("Enemy Prefabs")]
     public GameObject meleeEnemyPrefab;
     public GameObject rangeEnemyPrefab;
+    public GameObject bossEnemyPrefab;
 
     public Transform[] spawnLocations;
 
@@ -31,6 +33,7 @@ public class SpawnManager : MonoBehaviour
     public int addRangeEnemies;
 
     public float hpMultiplier = 0;
+    public float damageMultiplier = 0;
     public float coinMultiplier = 0;
 
     private void Start()
@@ -51,6 +54,7 @@ public class SpawnManager : MonoBehaviour
             Enemy enemyScript = enemy.GetComponent<Enemy>();
             enemyScript.coinDrop = (int)(enemyScript.coinDrop * coinMultiplier);
             enemyScript.maxHealth = enemyScript.maxHealth * hpMultiplier;
+            enemyScript.damage = enemyScript.damage * damageMultiplier;
             enemyScript.currentHealth = enemyScript.maxHealth;
 
 
@@ -80,6 +84,7 @@ public class SpawnManager : MonoBehaviour
                 Enemy enemyScript = enemy.GetComponent<Enemy>();
                 enemyScript.coinDrop = (int)(enemyScript.coinDrop * coinMultiplier);
                 enemyScript.maxHealth = enemyScript.maxHealth * hpMultiplier;
+                enemyScript.damage = enemyScript.damage * damageMultiplier;
                 enemyScript.currentHealth = enemyScript.maxHealth;
 
 
@@ -102,6 +107,17 @@ public class SpawnManager : MonoBehaviour
 
     public void StartWave()
     {
+        if (wave < 11)
+        {
+            PlayerPrefs.SetInt("Checkpoint Wave", 1);
+        }
+        if (wave % 10 == 1)
+        {
+            gameManager.remainingTime = gameManager.initialTime;
+            PlayerPrefs.SetInt("Checkpoint Wave", wave);
+        }
+        
+
         endWave = false;
         maxNumOfEnemiesInScene = 0;
 
@@ -113,6 +129,10 @@ public class SpawnManager : MonoBehaviour
         {
             enemyQueue.Add(rangeEnemyPrefab);
         }
+        if (wave % 10 == 0)
+        {
+            enemyQueue.Add(bossEnemyPrefab);
+        }
         Shuffle(enemyQueue);
 
         maxNumOfEnemiesInScene = (int)(enemyQueue.Count * 0.15f);
@@ -122,6 +142,7 @@ public class SpawnManager : MonoBehaviour
         }
 
         StartCoroutine(SpawnEnemies());
+
     }
 
     void CalculateNextWave()
@@ -129,6 +150,7 @@ public class SpawnManager : MonoBehaviour
         enemyQueue.Clear();
         wave++;
         waveText.text = $"Wave: {wave}";
+
         CalculateEnemiesForWave(wave);
     }
 
@@ -140,15 +162,12 @@ public class SpawnManager : MonoBehaviour
         addMeleeEnemies = 1;
         addRangeEnemies = 1;
         hpMultiplier = 1;
+        damageMultiplier = 1;
         coinMultiplier = 1;
 
         // Calculate for each wave from 1 to current wave
         for (int w = 1; w <= currentWave; w++)
         {
-            if (w < 11)
-            {
-                PlayerPrefs.SetInt("Checkpoint Wave", 1);
-            }
 
             if (w % 10 == 1)
             {
@@ -157,13 +176,12 @@ public class SpawnManager : MonoBehaviour
                     addMeleeEnemies++;
                     addRangeEnemies++;
                 }
-
-                PlayerPrefs.SetInt("Checkpoint Wave", w);
             }
 
             if (w % 10 == 0)
             {
                 hpMultiplier += 0.5f;
+                damageMultiplier += 0.5f;
                 coinMultiplier += 0.5f;
             }
             else
@@ -181,8 +199,6 @@ public class SpawnManager : MonoBehaviour
 
     }
 
- 
-
     void Shuffle<T>(List<T> list)
     {
         for (int i = list.Count - 1; i > 0; i--)
@@ -192,10 +208,5 @@ public class SpawnManager : MonoBehaviour
             list[i] = list[randomIndex];
             list[randomIndex] = temp;
         }
-    }
-
-    public static void SaveWave()
-    {
-        
     }
 }

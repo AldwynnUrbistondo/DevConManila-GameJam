@@ -4,6 +4,8 @@ public class UIScript : MonoBehaviour
 {
     public GameObject Untouchable;
     public GameObject delayDisable;
+    public Animator anim;
+    public GameObject MainMenuStuff;
     void Start()
     {
     }
@@ -31,8 +33,8 @@ public class UIScript : MonoBehaviour
 
     public void delayButton()
     {
-        gameObject.SetActive(true);
-        Invoke("ButtonAnim", 1f);
+        Untouchable.SetActive(true);
+        Invoke("ButtonAnim", 2f);
     }
 
     public void ButtonAnim()
@@ -50,4 +52,15 @@ public class UIScript : MonoBehaviour
     {
         delayDisable.SetActive(false);
     }
+
+    public void NewGameButtonAnim()
+    {
+        anim.SetTrigger("NewGame");
+    }
+
+    public void NewGameButtonBack()
+    {
+        anim.SetTrigger("NewBack");
+    }
+
 }

@@ -100,7 +100,7 @@ public class ShooterScript : MonoBehaviour
 
         if (rng <= critRate)
         {
-            return damage + (damage * critDamage);
+            return damage + (damage * (critDamage / 100));
         }
         else
         {

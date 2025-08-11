@@ -5,6 +5,7 @@ using TMPro;
 
 public class SpawnManager : MonoBehaviour
 {
+    public Animator timeBreak;
     public GameManager gameManager;
     public int wave;
     public TextMeshProUGUI waveText;
@@ -82,9 +83,9 @@ public class SpawnManager : MonoBehaviour
                 int randomLoc = Random.Range(0, spawnLocations.Length);
                 GameObject enemy = Instantiate(enemyQueue[0], spawnLocations[randomLoc].position, Quaternion.identity);
                 Enemy enemyScript = enemy.GetComponent<Enemy>();
-                enemyScript.coinDrop = (int)(enemyScript.coinDrop * coinMultiplier);
-                enemyScript.maxHealth = enemyScript.maxHealth * hpMultiplier;
-                enemyScript.damage = enemyScript.damage * damageMultiplier;
+                enemyScript.coinDrop += (int)(enemyScript.coinDrop * coinMultiplier);
+                enemyScript.maxHealth += enemyScript.maxHealth * hpMultiplier;
+                enemyScript.damage += enemyScript.damage * damageMultiplier;
                 enemyScript.currentHealth = enemyScript.maxHealth;
 
 
@@ -98,6 +99,11 @@ public class SpawnManager : MonoBehaviour
             {
                 canSpawnRemainingEnemies = false;
                 endWave = true;
+
+                if (wave % 10 == 0)
+                {
+                    timeBreak.Play("TimeBreak");
+                }
 
                 CalculateNextWave();
                 StartWave();
@@ -113,6 +119,7 @@ public class SpawnManager : MonoBehaviour
         }
         if (wave % 10 == 1)
         {
+            
             gameManager.remainingTime = gameManager.initialTime;
             PlayerPrefs.SetInt("Checkpoint Wave", wave);
         }

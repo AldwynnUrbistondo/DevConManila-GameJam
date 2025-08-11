@@ -1,63 +1,66 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerAttack : ShooterScript
 {
     public Transform mouseTransform;
     public PlayerMovement playerMovement;
+    public Animator anim;
+    public AnimationClip attackClip;
+    bool isAttacking = false;
 
     public override void Start()
     {
         base.Start();
         playerMovement = GetComponent<PlayerMovement>();
+        anim = GetComponent<Animator>();
     }
 
     public override void Update()
     {
-
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0f;
         mouseTransform.position = mousePos;
 
-
-        if (!GameManager.isPaused && GameManager.canShoot) 
+        if (!GameManager.isPaused && GameManager.canShoot && !isAttacking)
         {
-            fireInterval += Time.deltaTime;
-            if (fireInterval >= fireRate && Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0))
             {
                 ShootEnemy(damage);
-                fireInterval = 0;
-                GameManager.canMove = false;
             }
-            if (Input.GetMouseButtonUp(0))
-            {
-                GameManager.canMove = true;
-            }
-            
         }
-
     }
 
     public override void ShootEnemy(float damage)
     {
-        float finalDamage = CritCalculation(damage);
+        StartCoroutine(Attack());
+    }
 
-        GameObject prj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+    IEnumerator Attack()
+    {
+        isAttacking = true;
+
+        // Speed up animation so it finishes within fireRate
+        anim.speed = attackClip.length / fireRate;
+        anim.Play("Attack");
+        GameManager.canMove = false;
+
+        // Wait for animation to finish (faster speed = shorter time)
+        yield return new WaitForSeconds(fireRate);
+
+        // Fire projectile right after animation
+        float finalDamage = CritCalculation(damage);
+        GameObject prj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
         Projectile prjScript = prj.GetComponent<Projectile>();
-        if (playerMovement.isFacingRight)
-        {
-            prjScript.direction = Vector2.right;
-        }
-        else
-        {
-            prjScript.direction = -Vector2.right;
-        }
-       
+        prjScript.direction = playerMovement.isFacingRight ? Vector2.right : -Vector2.right;
         prjScript.damage = finalDamage;
         prjScript.Shoot();
 
-        //AudioManager audioManager = FindObjectOfType<AudioManager>();
-        //audioManager.PlaySound(SoundType.PlayerProjectile);
-        //}
+        anim.speed = 1;
+        GameManager.canMove = true;
 
+        // Cooldown is already handled by fireRate wait
+        isAttacking = false;
     }
+
 }

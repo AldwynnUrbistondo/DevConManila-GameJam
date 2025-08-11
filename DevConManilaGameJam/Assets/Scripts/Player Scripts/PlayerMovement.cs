@@ -5,10 +5,12 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     public float movementSpeed;
     public bool isFacingRight;
+    public Animator anim;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -17,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
         {
             float xInput = Input.GetAxisRaw("Horizontal");
             rb.linearVelocity = new Vector2(xInput * movementSpeed, 0);
+            anim.Play("Walk");
         }
         else
         {

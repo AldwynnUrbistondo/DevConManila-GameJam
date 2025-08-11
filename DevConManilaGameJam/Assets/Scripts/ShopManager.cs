@@ -111,7 +111,7 @@ public class ShopManager : MonoBehaviour
     public void UpdateButtonState()
     {
         UpdatePrices(); // Always update prices first
-        coinsText.text = $"Credits: {coins}";
+        coinsText.text = $": {coins}";
         PlayerPrefs.SetInt("Credits", coins);
 
         // Enable/Disable buttons

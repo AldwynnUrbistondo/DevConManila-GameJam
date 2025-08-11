@@ -69,7 +69,7 @@ public class ShooterScript : MonoBehaviour
 
     public virtual void ShootEnemy(float damage)
     {
-        if (nearestEnemy != null)
+        if (nearestEnemy != null && GameManager.canMove)
         {
             float finalDamage = CritCalculation(damage);
             GameObject prj;

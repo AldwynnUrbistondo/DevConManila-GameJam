@@ -12,7 +12,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        float xInput = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(xInput * movementSpeed, 0);
+        if (GameManager.canMove)
+        {
+            float xInput = Input.GetAxisRaw("Horizontal");
+            rb.linearVelocity = new Vector2(xInput * movementSpeed, 0);
+        }
+        
     }
 }

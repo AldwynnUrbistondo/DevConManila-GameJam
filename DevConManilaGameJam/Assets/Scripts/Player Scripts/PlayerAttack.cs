@@ -12,11 +12,9 @@ public class PlayerAttack : ShooterScript
         mousePos.z = 0f;
         mouseTransform.position = mousePos;
 
-        //FindNearestEnemy();
-        //CleanEnemyList();
 
         fireInterval += Time.deltaTime;
-        if (fireInterval >= fireRate && Input.GetMouseButton(0)) //&& !GameManager.isPause && !GameManager.hasLose)
+        if (fireInterval >= fireRate && Input.GetMouseButton(0) && !GameManager.isPaused && GameManager.canMove) 
         {
             ShootEnemy(damage);
             fireInterval = 0;
@@ -26,8 +24,6 @@ public class PlayerAttack : ShooterScript
 
     public override void ShootEnemy(float damage)
     {
-        //if (nearestEnemy != null)
-        //{
         float finalDamage = CritCalculation(damage);
 
         GameObject prj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);

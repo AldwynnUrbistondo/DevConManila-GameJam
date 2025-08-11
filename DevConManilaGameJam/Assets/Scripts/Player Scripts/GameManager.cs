@@ -55,6 +55,15 @@ public class GameManager : MonoBehaviour
             PauseGame();
             StartCoroutine(FadeOut(1f));
         }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Time.timeScale = 15;
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            Time.timeScale = 1;
+        }
     }
 
     public void UpdateHealthUI()

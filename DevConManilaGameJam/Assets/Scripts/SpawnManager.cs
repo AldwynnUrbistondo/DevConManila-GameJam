@@ -5,7 +5,7 @@ using TMPro;
 
 public class SpawnManager : MonoBehaviour
 {
-    public int wave = 1;
+    public int wave;
     public TextMeshProUGUI waveText;
 
     [Header("Enemy Prefabs")]
@@ -35,6 +35,7 @@ public class SpawnManager : MonoBehaviour
 
     private void Start()
     {
+        wave = PlayerPrefs.GetInt("Checkpoint Wave");
         CalculateEnemiesForWave(wave);
         StartWave();
         waveText.text = $"Wave: {wave}";
@@ -144,10 +145,20 @@ public class SpawnManager : MonoBehaviour
         // Calculate for each wave from 1 to current wave
         for (int w = 1; w <= currentWave; w++)
         {
-            if (w % 10 == 1 && w > 10)
+            if (w < 11)
             {
-                addMeleeEnemies++;
-                addRangeEnemies++;
+                PlayerPrefs.SetInt("Checkpoint Wave", 1);
+            }
+
+            if (w % 10 == 1)
+            {
+                if (w > 10)
+                {
+                    addMeleeEnemies++;
+                    addRangeEnemies++;
+                }
+
+                PlayerPrefs.SetInt("Checkpoint Wave", w);
             }
 
             if (w % 10 == 0)
@@ -181,5 +192,10 @@ public class SpawnManager : MonoBehaviour
             list[i] = list[randomIndex];
             list[randomIndex] = temp;
         }
+    }
+
+    public static void SaveWave()
+    {
+        
     }
 }

@@ -74,6 +74,8 @@ public class ShopManager : MonoBehaviour
 
     private void Start()
     {
+        coins = PlayerPrefs.GetInt("Credits", coins);
+
         playerStats = FindAnyObjectByType<PlayerStats>();
         SetButtonFunctions();
         InitialValue();
@@ -115,6 +117,7 @@ public class ShopManager : MonoBehaviour
     {
         UpdatePrices(); // Always update prices first
         coinsText.text = $"Credits: {coins}";
+        PlayerPrefs.SetInt("Credits", coins);
 
         // Enable/Disable buttons
         healthButton.interactable = coins >= healthPrice;

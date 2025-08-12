@@ -7,6 +7,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
+    AudioManager am;
     public PlayerStats playerStats;
     public Animator transition;
 
@@ -29,8 +30,12 @@ public class GameManager : MonoBehaviour
     public static bool canShoot;
     public static bool canPetShoot = true;
 
+    bool isEnding = false;
+
     void Start()
     {
+        isEnding = false;
+        am = FindAnyObjectByType<AudioManager>();
         UnPauseGame();
 
         timeStop.SetActive(false);
@@ -51,11 +56,13 @@ public class GameManager : MonoBehaviour
         UpdateHealthUI();
         Timer();
 
-        if (remainingTime == 0 || playerStats.currentHealth <= 0)
+        if (remainingTime == 0 || playerStats.currentHealth <= 0 && !isEnding)
         {
+            isEnding = true;
             isContinueGame = false;
             PauseGame();
             StartCoroutine(FadeOut(1f));
+
         }
 
         if (Input.GetKey(KeyCode.Space))
@@ -123,6 +130,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator FadeOut(float time)
     {
+        am.PlaySound(SoundType.TimeStop);
         timeStop.SetActive(true);
         yield return new WaitForSecondsRealtime(1);
 

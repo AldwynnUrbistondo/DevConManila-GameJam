@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d40a6ee1b55a84c95938a97fad332d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  am: {fileID: 0}
   enemyInRange: []
   nearestEnemy: {fileID: 258479839}
   nearestEnemyDistance: 0
@@ -176,6 +177,7 @@ MonoBehaviour:
   damage: 0
   critRate: 0
   critDamage: 0
+  soundType: 4
   shop: {fileID: 258479840}
   type: 2
   petInitialDamage: 1
@@ -898,7 +900,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: be638295046880b4295b7fd6706d8f21, type: 3}
   m_Resource: {fileID: 8300000, guid: be638295046880b4295b7fd6706d8f21, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1027,7 +1029,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 02a7911fdf469db459b78a2e812e873c, type: 3}
   m_Resource: {fileID: 8300000, guid: 02a7911fdf469db459b78a2e812e873c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1280,6 +1282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d40a6ee1b55a84c95938a97fad332d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  am: {fileID: 0}
   enemyInRange: []
   nearestEnemy: {fileID: 258479839}
   nearestEnemyDistance: 0
@@ -1291,6 +1294,7 @@ MonoBehaviour:
   damage: 0
   critRate: 0
   critDamage: 0
+  soundType: 3
   shop: {fileID: 258479840}
   type: 1
   petInitialDamage: 0.5
@@ -2086,7 +2090,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: be638295046880b4295b7fd6706d8f21, type: 3}
   m_Resource: {fileID: 8300000, guid: be638295046880b4295b7fd6706d8f21, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3814,10 +3818,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Are you sure want to QUIT the game? Your progess will be saved at your
-    last checkpoint [Wave: 1]
-
-'
+  m_text: Are you sure want to QUIT the game? Your progess will be saved at your
+    last checkpoint.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e663c486971b1064f8ba46818048e82c, type: 2}
   m_sharedMaterial: {fileID: -3965101775051620606, guid: e663c486971b1064f8ba46818048e82c, type: 2}
@@ -3941,7 +3943,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: fa1de8ea3d7c2f54cb278db6068d9459, type: 3}
   m_Resource: {fileID: 8300000, guid: fa1de8ea3d7c2f54cb278db6068d9459, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6521,7 +6523,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 641aabdb99e9cd04c84202bc3ab9da5d, type: 3}
   m_Resource: {fileID: 8300000, guid: 641aabdb99e9cd04c84202bc3ab9da5d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6924,7 +6926,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 0f3651bd2816349498dc1453a651d793, type: 3}
   m_Resource: {fileID: 8300000, guid: 0f3651bd2816349498dc1453a651d793, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7538,7 +7540,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 76f65a3e465bf5348975aaaf454e932f, type: 3}
   m_Resource: {fileID: 8300000, guid: 76f65a3e465bf5348975aaaf454e932f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7667,7 +7669,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 76f65a3e465bf5348975aaaf454e932f, type: 3}
   m_Resource: {fileID: 8300000, guid: 76f65a3e465bf5348975aaaf454e932f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8007,7 +8009,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: be638295046880b4295b7fd6706d8f21, type: 3}
   m_Resource: {fileID: 8300000, guid: be638295046880b4295b7fd6706d8f21, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8940,7 +8942,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 641aabdb99e9cd04c84202bc3ab9da5d, type: 3}
   m_Resource: {fileID: 8300000, guid: 641aabdb99e9cd04c84202bc3ab9da5d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10708,7 +10710,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: fa1de8ea3d7c2f54cb278db6068d9459, type: 3}
   m_Resource: {fileID: 8300000, guid: fa1de8ea3d7c2f54cb278db6068d9459, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11374,7 +11376,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 02a7911fdf469db459b78a2e812e873c, type: 3}
   m_Resource: {fileID: 8300000, guid: 02a7911fdf469db459b78a2e812e873c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12146,7 +12148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1641687650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12525,7 +12527,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: fa1de8ea3d7c2f54cb278db6068d9459, type: 3}
   m_Resource: {fileID: 8300000, guid: fa1de8ea3d7c2f54cb278db6068d9459, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -13427,6 +13429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6091727d3e25741bccbab90ea825c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  am: {fileID: 0}
   enemyInRange: []
   nearestEnemy: {fileID: 0}
   nearestEnemyDistance: 0
@@ -13438,6 +13441,7 @@ MonoBehaviour:
   damage: 0
   critRate: 0
   critDamage: 0
+  soundType: 1
   mouseTransform: {fileID: 1725828821}
   playerMovement: {fileID: 0}
   anim: {fileID: 0}
@@ -14405,7 +14409,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 02a7911fdf469db459b78a2e812e873c, type: 3}
   m_Resource: {fileID: 8300000, guid: 02a7911fdf469db459b78a2e812e873c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -14897,7 +14901,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 76f65a3e465bf5348975aaaf454e932f, type: 3}
   m_Resource: {fileID: 8300000, guid: 76f65a3e465bf5348975aaaf454e932f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -15102,6 +15106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d40a6ee1b55a84c95938a97fad332d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  am: {fileID: 0}
   enemyInRange: []
   nearestEnemy: {fileID: 258479839}
   nearestEnemyDistance: 0
@@ -15113,6 +15118,7 @@ MonoBehaviour:
   damage: 0
   critRate: 0
   critDamage: 0
+  soundType: 2
   shop: {fileID: 258479840}
   type: 0
   petInitialDamage: 1
@@ -15747,7 +15753,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 641aabdb99e9cd04c84202bc3ab9da5d, type: 3}
   m_Resource: {fileID: 8300000, guid: 641aabdb99e9cd04c84202bc3ab9da5d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

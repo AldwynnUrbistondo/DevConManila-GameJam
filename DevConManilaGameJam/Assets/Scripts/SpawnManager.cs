@@ -5,6 +5,7 @@ using TMPro;
 
 public class SpawnManager : MonoBehaviour
 {
+    [HideInInspector] AudioManager am;
     public Animator timeBreak;
     public GameManager gameManager;
     public int wave;
@@ -39,6 +40,7 @@ public class SpawnManager : MonoBehaviour
 
     private void Start()
     {
+        am = FindAnyObjectByType<AudioManager>();
         wave = PlayerPrefs.GetInt("Checkpoint Wave");
         CalculateEnemiesForWave(wave);
         StartWave();
@@ -103,6 +105,7 @@ public class SpawnManager : MonoBehaviour
                 if (wave % 10 == 0)
                 {
                     timeBreak.Play("TimeBreak");
+                    am.PlaySound(SoundType.TimeStop);
                 }
 
                 CalculateNextWave();

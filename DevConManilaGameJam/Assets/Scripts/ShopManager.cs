@@ -103,9 +103,9 @@ public class ShopManager : MonoBehaviour
         critRatePrice = CalculatePrice(30, critRateLevel - 1, critRatePriceScale);
         attackSpeedPrice = CalculatePrice(30, attackSpeedLevel - 1, attackSpeedPriceScale);
 
-        laserPetPrice = CalculatePrice(50, laserPetLevel, laserPetPriceScale);
+        laserPetPrice = CalculatePrice(40, laserPetLevel, laserPetPriceScale);
         cryoPetPrice = CalculatePrice(30, cryoPetLevel, cryoPetPriceScale);
-        energyWavePetPrice = CalculatePrice(100, energyWavePetLevel, energyWavePetPriceScale);
+        energyWavePetPrice = CalculatePrice(50, energyWavePetLevel, energyWavePetPriceScale);
     }
 
     public void UpdateButtonState()

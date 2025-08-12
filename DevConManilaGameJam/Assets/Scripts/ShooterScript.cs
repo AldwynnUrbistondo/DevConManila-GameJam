@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ShooterScript : MonoBehaviour
 {
+    [HideInInspector] public AudioManager am;
+
     [Header("Shooter Variables")]
     public List<Enemy> enemyInRange = new List<Enemy>();
     public Transform nearestEnemy;
@@ -20,11 +22,14 @@ public class ShooterScript : MonoBehaviour
     public float critRate;
     public float critDamage;
 
+    public SoundType soundType;
+
 
 
     public virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        am = FindAnyObjectByType<AudioManager>();
         nearestEnemyDistance = Mathf.Infinity;
     }
 
@@ -88,8 +93,8 @@ public class ShooterScript : MonoBehaviour
             prjScript.damage = finalDamage;
             prjScript.Shoot();
 
-            //AudioManager audioManager = FindObjectOfType<AudioManager>();
-            //audioManager.PlaySound(SoundType.RockProjectile);
+
+            am.PlaySound(soundType);
         }
 
     }

@@ -56,6 +56,8 @@ public class PlayerAttack : ShooterScript
         prjScript.damage = finalDamage;
         prjScript.Shoot();
 
+        am.PlaySound(soundType);
+
         anim.speed = 1;
         GameManager.canMove = true;
 

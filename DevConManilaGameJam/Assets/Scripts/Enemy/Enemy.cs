@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour, IDamageable
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public SpriteRenderer spriteRenderer;
     [HideInInspector] public RaycastHit2D targetRay;
+    [HideInInspector] public AudioManager am;
 
     public float currentHealth;
     public float maxHealth;
@@ -28,6 +29,7 @@ public class Enemy : MonoBehaviour, IDamageable
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        am = FindAnyObjectByType<AudioManager>();
     }
 
     public virtual void Update()
@@ -64,6 +66,8 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        am.PlaySound(SoundType.PlayerHitEnemy);
 
         if (currentHealth <= 0)
         {

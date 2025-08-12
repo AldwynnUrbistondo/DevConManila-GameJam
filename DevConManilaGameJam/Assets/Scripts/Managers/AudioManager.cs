@@ -11,10 +11,8 @@ public enum SoundType
     EnergyWaveProjectile,
     PlayerHitEnemy,
     EnemyHitPlayer,
-    PlayerDeath,
     EnemyDeath,
     PetSpawn,
-    //OpenShop,
     ButtonClick,
     ButtonBuy,
     Clock,
@@ -32,9 +30,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource[] enemyDeathSound;
     public AudioSource[] clockSound;
 
-    public AudioSource playerSpawnSound;
     public AudioSource petSpawnSound;
-    //public AudioSource openShop;
     public AudioSource buttonClickSound;
     public AudioSource buttonBuySound;
     public AudioSource timeStop;
@@ -50,10 +46,6 @@ public class AudioManager : MonoBehaviour
 
             case SoundType.PlayerHitEnemy:
                 AudioPlay(playerHitEnemySound);
-                break;
-
-            case SoundType.PlayerDeath:
-                AudioPlay(playerDeathSound);
                 break;
 
             case SoundType.LaserProjectile:
@@ -76,16 +68,9 @@ public class AudioManager : MonoBehaviour
                 AudioPlay(enemyDeathSound);
                 break;
 
-            case SoundType.Clock:
-                AudioPlay(clockSound);
-                break;
 
             // = = = = = = = = Single Channel = = = = = = = = 
 
-           /* case SoundType.OpenShop:
-                openShop.Play();
-                break;
-           */
 
             case SoundType.ButtonClick:
                 buttonClickSound.Play();
@@ -93,10 +78,6 @@ public class AudioManager : MonoBehaviour
 
             case SoundType.ButtonBuy:
                 buttonBuySound.Play();
-                break;
-
-            case SoundType.PlayerSpawn:
-                playerSpawnSound.Play();
                 break;
 
             case SoundType.PetSpawn:

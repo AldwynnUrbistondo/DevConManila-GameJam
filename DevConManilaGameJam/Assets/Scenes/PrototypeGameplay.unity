@@ -4169,7 +4169,7 @@ MonoBehaviour:
   frontHealthBar: {fileID: 736117479}
   backHealthBar: {fileID: 1150263680}
   timerText: {fileID: 1702695077}
-  initialTime: 480
+  initialTime: 420
   remainingTime: 0
   timeStop: {fileID: 935654010}
 --- !u!4 &534487956
@@ -13435,8 +13435,8 @@ MonoBehaviour:
   critDamage: 0
   critRate: 0
   attackSpeed: 0.5
-  maxHealthScale: 2
-  healthRegenScale: 0.1
+  maxHealthScale: 3
+  healthRegenScale: 0.075
   damageScale: 0.1
   critDamageScale: 5
   critRateScale: 4

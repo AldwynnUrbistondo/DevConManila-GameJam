@@ -24,7 +24,7 @@ public class PlayerAttack : ShooterScript
 
         if (!GameManager.isPaused && GameManager.canShoot && !isAttacking)
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space))
             {
                 ShootEnemy(damage);
             }

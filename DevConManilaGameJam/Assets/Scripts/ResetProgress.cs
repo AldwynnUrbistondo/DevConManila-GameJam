@@ -5,7 +5,7 @@ public class ResetProgress : MonoBehaviour
     void Awake()
     {
         PlayerPrefs.SetInt("Checkpoint Wave", 1);
-        PlayerPrefs.SetInt("Credits", 999999);
+        PlayerPrefs.SetInt("Credits", 0);
 
         PlayerPrefs.SetInt("Health Level", 1);
         PlayerPrefs.SetInt("Health Regen Level", 1);

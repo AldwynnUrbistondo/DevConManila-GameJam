@@ -18,30 +18,56 @@ public class ButtonFunctions : MonoBehaviour
 
     private void Start()
     {
+        // Add click sounds only if AudioManager AND button arrays are set
         if (audioManager != null)
         {
-            foreach (Button b in clickableButtons)
+            if (clickableButtons != null)
             {
-                b.onClick.AddListener(AddButtonClickSound);
+                foreach (Button b in clickableButtons)
+                {
+                    if (b != null)
+                    {
+                        b.onClick.AddListener(AddButtonClickSound);
+                    }
+                }
             }
 
-            foreach (Button b in purchaseButtons)
+            if (purchaseButtons != null)
             {
-                b.onClick.AddListener(AddBuySound);
+                foreach (Button b in purchaseButtons)
+                {
+                    if (b != null)
+                    {
+                        b.onClick.AddListener(AddBuySound);
+                    }
+                }
             }
         }
 
-        pauseButton.onClick.AddListener(PauseButton);
+        // Individual buttons with null checks
+        if (pauseButton != null)
+        {
+            pauseButton.onClick.AddListener(PauseButton);
+        }
 
-        resumeButton.onClick.AddListener(ResumeButton);
+        if (resumeButton != null)
+        {
+            resumeButton.onClick.AddListener(ResumeButton);
+        }
 
-        saveButton.onClick.AddListener(ResumeButton);
-        saveButton.onClick.AddListener(SaveButton);
+        if (saveButton != null)
+        {
+            saveButton.onClick.AddListener(ResumeButton);
+            saveButton.onClick.AddListener(SaveButton);
+        }
 
-        quitButton.onClick.AddListener(SaveButton);
-        quitButton.onClick.AddListener(QuitButton);
-
+        if (quitButton != null)
+        {
+            quitButton.onClick.AddListener(SaveButton);
+            quitButton.onClick.AddListener(QuitButton);
+        }
     }
+
 
     void AddButtonClickSound()
     {

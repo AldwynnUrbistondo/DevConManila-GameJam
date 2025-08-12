@@ -41,7 +41,7 @@ public class SpawnManager : MonoBehaviour
     private void Start()
     {
         am = FindAnyObjectByType<AudioManager>();
-        wave = PlayerPrefs.GetInt("Checkpoint Wave");
+        wave = PlayerPrefs.GetInt("Checkpoint Wave", 1);
         CalculateEnemiesForWave(wave);
         StartWave();
         waveText.text = $"Wave: {wave}";

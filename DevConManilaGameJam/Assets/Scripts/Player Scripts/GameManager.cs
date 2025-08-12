@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
 
         }
 
+        /*
         if (Input.GetKey(KeyCode.Space))
         {
             Time.timeScale = 15;
@@ -73,6 +74,7 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
+        */
     }
 
     public void UpdateHealthUI()

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using System.Collections;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -68,6 +69,7 @@ public class PlayerStats : MonoBehaviour
         if (!isPlayerDead)
         {
             currentHealth -= damage;
+            StartCoroutine(HitColor());
         }
         if (currentHealth < 0)
         {
@@ -88,6 +90,34 @@ public class PlayerStats : MonoBehaviour
                 hpToRegen--;
             }
         }
+    }
+    IEnumerator HitColor()
+    {
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+
+        Color colorA;
+        colorA = Color.white;
+
+        Color colorB = Color.red;
+        float duration = 0.1f;
+        float t = 0;
+
+        while (t < 1)
+        {
+            t += Time.deltaTime / duration;
+            sprite.color = Color.Lerp(colorA, colorB, t);
+            yield return null;
+        }
+
+        t = 0;
+
+        while (t < 1)
+        {
+            t += Time.deltaTime / duration;
+            sprite.color = Color.Lerp(colorB, colorA, t);
+            yield return null;
+        }
+
     }
 
     #region Stats Calculation

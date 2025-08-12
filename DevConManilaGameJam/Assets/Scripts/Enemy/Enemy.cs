@@ -8,6 +8,11 @@ public class Enemy : MonoBehaviour, IDamageable
     [HideInInspector] public SpriteRenderer spriteRenderer;
     [HideInInspector] public RaycastHit2D targetRay;
     [HideInInspector] public AudioManager am;
+    [HideInInspector] public Animator anim;
+
+    [Header("Clips")]
+    public AnimationClip attckClip;
+    public AnimationClip deathClip;
 
     public float currentHealth;
     public float maxHealth;
@@ -30,11 +35,12 @@ public class Enemy : MonoBehaviour, IDamageable
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         am = FindAnyObjectByType<AudioManager>();
+        anim = GetComponent<Animator>();
     }
 
     public virtual void Update()
     {
-        if (!TargetInRange() && !isAttacking)
+        if (!TargetInRange() && !isAttacking && !isDying)
         {
             Vector2 direction = (playerPos.position - transform.position).normalized;
             if (!isFrozen)
@@ -59,6 +65,11 @@ public class Enemy : MonoBehaviour, IDamageable
             StartCoroutine(AttackTarget());
         }
 
+        if (rb.linearVelocity != Vector2.zero)
+        {
+            //anim.Play("Walk');
+        }
+
     }
 
     #region TakeDamage and Die
@@ -68,11 +79,14 @@ public class Enemy : MonoBehaviour, IDamageable
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
         am.PlaySound(SoundType.PlayerHitEnemy);
+        StartCoroutine(HitColor());
 
         if (currentHealth <= 0)
         {
             Die();
         }
+
+        
     }
 
     public void Die()
@@ -87,6 +101,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public IEnumerator StartDie()
     {
+        am.PlaySound(SoundType.EnemyDeath);
         Collider2D col = GetComponent<Collider2D>();
         ShopManager shop = FindAnyObjectByType<ShopManager>();
         shop.coins += coinDrop;
@@ -96,6 +111,8 @@ public class Enemy : MonoBehaviour, IDamageable
         {
             col.enabled = false;
         }
+        //anim.Play("Die");
+        //yield return new WaitForSeconds(deathClip.length);
         yield return null;
         Destroy(this.gameObject);
     }
@@ -130,4 +147,39 @@ public class Enemy : MonoBehaviour, IDamageable
         yield return null;
     }
 
+    IEnumerator HitColor()
+    {
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+
+        Color colorA;
+        if (isFrozen)
+        {
+            colorA = Color.blue; // new Color(0.68f, 0.85f, 0.9f); // LightBlue (RGB: 173, 216, 230)
+        }
+        else
+        {
+            colorA = Color.white;
+        }
+
+        Color colorB = Color.red;
+        float duration = 0.1f;
+        float t = 0;
+
+        while (t < 1)
+        {
+            t += Time.deltaTime / duration;
+            sprite.color = Color.Lerp(colorA, colorB, t);
+            yield return null;
+        }
+
+        t = 0;
+
+        while (t < 1)
+        {
+            t += Time.deltaTime / duration;
+            sprite.color = Color.Lerp(colorB, colorA, t);
+            yield return null;
+        }
+
+    }
 }

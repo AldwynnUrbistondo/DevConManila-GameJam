@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyMelee : Enemy
 {
     public float attackDistance;
-
+    public float attackLandingTime;
     public override void Start()
     {
         base.Start();

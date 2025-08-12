@@ -12,6 +12,10 @@ public class PetStats : ShooterScript
 {
     public ShopManager shop;
     public PetType type;
+    public bool isFacingRight = true;
+    public float movementSpeed = 3.5f;
+    public Vector3 offSetToPlayer;
+    public Transform playerPos;
 
     [Header("Initial Stats")]
     public float petInitialDamage;
@@ -45,6 +49,15 @@ public class PetStats : ShooterScript
     {
         InitialValue();
         UpdateStats();
+        rb = GetComponent<Rigidbody2D>();
+        playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        
+    }
+
+    public override void Update()
+    {
+        base.Update();
+        GoToPlayer();
     }
 
 
@@ -112,5 +125,64 @@ public class PetStats : ShooterScript
         }
         stat = Mathf.Clamp(stat, petMaxAttackSpeed, petInitialAttackSpeed);
         petAttackSpeed = stat;
+    }
+
+    public override void ShootEnemy(float damage)
+    {
+        if (nearestEnemy != null && GameManager.canPetShoot)
+        {
+
+            Vector2 directionToTarget = (nearestEnemy.position - transform.position).normalized;
+            Flip(directionToTarget);
+
+            float finalDamage = CritCalculation(damage);
+            GameObject prj;
+
+            if (firePoint != null)
+            {
+                prj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+            }
+            else
+            {
+                prj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            }
+
+            Projectile prjScript = prj.GetComponent<Projectile>();
+            prjScript.target = nearestEnemy;
+            prjScript.damage = finalDamage;
+            prjScript.Shoot();
+
+
+            am.PlaySound(soundType);
+        }
+
+    }
+
+    public void Flip(Vector2 direction)
+    {
+        if ((isFacingRight && direction.x < 0f || !isFacingRight && direction.x > 0f))
+        {
+            isFacingRight = !isFacingRight;
+            Vector2 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
+    }
+
+    void GoToPlayer()
+    {
+
+        Vector2 targetPos = playerPos.position + offSetToPlayer;
+        float distance = Vector2.Distance(transform.position, targetPos);
+
+        if (distance > 0.05f)
+        {
+            Vector2 direction = ((playerPos.position + offSetToPlayer) - transform.position).normalized;
+            rb.linearVelocity = direction * movementSpeed;
+        }
+        else
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
     }
 }

@@ -42,6 +42,7 @@ public class PlayerStats : MonoBehaviour
 
     public PlayerAttack playerAttack;
     public ShopManager shop;
+    AudioManager am;
 
     public float hpToRegen = 0;
     public bool isPlayerDead = false;
@@ -50,6 +51,7 @@ public class PlayerStats : MonoBehaviour
     {
         playerAttack = GetComponent<PlayerAttack>();
         shop = FindAnyObjectByType<ShopManager>();
+        am = FindAnyObjectByType<AudioManager>();
         //InitialValue();
         UpdateStats();
     }
@@ -68,6 +70,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (!isPlayerDead)
         {
+            am.PlaySound(SoundType.EnemyHitPlayer);
             currentHealth -= damage;
             StartCoroutine(HitColor());
         }

@@ -445,8 +445,11 @@ MonoBehaviour:
   rb: {fileID: 0}
   spriteRenderer: {fileID: 0}
   am: {fileID: 0}
-  currentHealth: 50
-  maxHealth: 50
+  anim: {fileID: 0}
+  attckClip: {fileID: 0}
+  deathClip: {fileID: 0}
+  currentHealth: 100
+  maxHealth: 100
   damage: 5
   isDying: 0
   isAttacking: 0

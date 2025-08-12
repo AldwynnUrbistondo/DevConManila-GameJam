@@ -75,4 +75,9 @@ public class UIScript : MonoBehaviour
         anim.SetTrigger("ExitGameReturn");
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }

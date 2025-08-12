@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 18489024}
   - component: {fileID: 18489023}
   - component: {fileID: 18489026}
+  - component: {fileID: 18489027}
   m_Layer: 5
   m_Name: EXIT
   m_TagString: Untagged
@@ -344,6 +345,18 @@ MonoBehaviour:
       - m_Target: {fileID: 18489026}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 18489027}
+        m_TargetAssemblyTypeName: UIScript, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -488,6 +501,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &18489027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18489021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d56750aedfc874d80f8490cc303e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Untouchable: {fileID: 0}
+  delayDisable: {fileID: 0}
+  anim: {fileID: 0}
+  MainMenuStuff: {fileID: 0}
 --- !u!1 &31337778
 GameObject:
   m_ObjectHideFlags: 0
@@ -5774,6 +5803,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2037268571}
         m_TargetAssemblyTypeName: UIScript, Assembly-CSharp
         m_MethodName: NewGameButtonAnim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2037268571}
+        m_TargetAssemblyTypeName: UIScript, Assembly-CSharp
+        m_MethodName: delayButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -10,7 +10,6 @@ public enum SoundType
     CryoProjectile,
     EnergyWaveProjectile,
     PlayerHitEnemy,
-    PlayerWalk,
     EnemyHitPlayer,
     PlayerDeath,
     EnemyDeath,
@@ -26,7 +25,6 @@ public class AudioManager : MonoBehaviour
     public AudioSource[] playerProjectileSound;
     public AudioSource[] playerHitEnemySound;
     public AudioSource[] playerDeathSound;
-    public AudioSource[] playerWalkSound;
     public AudioSource[] laserProjectileSound;
     public AudioSource[] cryoProjectileSound;
     public AudioSource[] energyWaveProjectileSound;
@@ -48,10 +46,6 @@ public class AudioManager : MonoBehaviour
             // = = = = = = = = Multiple Channel = = = = = = = = 
             case SoundType.PlayerProjectile:
                 AudioPlay(playerProjectileSound);
-                break;
-
-            case SoundType.PlayerWalk:
-                AudioPlay(playerWalkSound);
                 break;
 
             case SoundType.PlayerHitEnemy:

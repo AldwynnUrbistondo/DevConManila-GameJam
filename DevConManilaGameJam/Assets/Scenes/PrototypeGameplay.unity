@@ -188,8 +188,8 @@ MonoBehaviour:
   petCritDamage: 0
   petCritRate: 0
   petAttackSpeed: 0
-  petDamageScale: 0.1
-  petCritDamageScale: 0.2
+  petDamageScale: 0.2
+  petCritDamageScale: 5
   petCritRateScale: 8
   petAttackSpeedScale: 0.03
   levelText: {fileID: 831893662}
@@ -882,8 +882,8 @@ MonoBehaviour:
   petCritDamage: 0
   petCritRate: 0
   petAttackSpeed: 0
-  petDamageScale: 0.1
-  petCritDamageScale: 0.2
+  petDamageScale: 0.2
+  petCritDamageScale: 5
   petCritRateScale: 8
   petAttackSpeedScale: 0.03
   levelText: {fileID: 707760424}
@@ -9319,8 +9319,8 @@ MonoBehaviour:
   petCritDamage: 0
   petCritRate: 0
   petAttackSpeed: 0
-  petDamageScale: 0.1
-  petCritDamageScale: 0.1
+  petDamageScale: 0.2
+  petCritDamageScale: 5
   petCritRateScale: 5
   petAttackSpeedScale: 0.04
   levelText: {fileID: 448454554}

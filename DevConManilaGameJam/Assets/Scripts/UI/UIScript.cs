@@ -30,11 +30,11 @@ public class UIScript : MonoBehaviour
     {
         GameManager.PauseGame();
     }
-
+    //Main Menu and untouchable and Animation
     public void delayButton()
     {
         Untouchable.SetActive(true);
-        Invoke("ButtonAnim", 2f);
+        Invoke("ButtonAnim", 1.5f);
     }
 
     public void ButtonAnim()
@@ -61,6 +61,18 @@ public class UIScript : MonoBehaviour
     public void NewGameButtonBack()
     {
         anim.SetTrigger("NewBack");
+    }
+
+    //Exit Button and confirmation
+
+    public void ExitGameButtonAnim()
+    {
+        anim.SetTrigger("ExitGame");
+    }
+
+    public void ExitGameButtonReturnAnim()
+    {
+        anim.SetTrigger("ExitGameReturn");
     }
 
 }

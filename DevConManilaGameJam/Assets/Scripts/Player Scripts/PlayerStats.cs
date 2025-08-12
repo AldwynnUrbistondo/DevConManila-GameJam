@@ -152,7 +152,9 @@ public class PlayerStats : MonoBehaviour
         damageText.text = $"Damage:\n{damage:F1}";
         critDamageText.text = $"Crit Dmg:\n{critDamage}";
         critRateText.text = $"Crit Rate:\n{critRate}%";
-        attackSpeedText.text = $"Atk Spd:\n{attackSpeed:F3}/s";
+
+        float atkSpd = 1 / attackSpeed;
+        attackSpeedText.text = $"Atk Spd:\n{atkSpd:F3}/s";
     }
 
     public void HealthCalculation()

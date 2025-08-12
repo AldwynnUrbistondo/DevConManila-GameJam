@@ -190,7 +190,7 @@ public class SpawnManager : MonoBehaviour
 
             if (w % 10 == 0)
             {
-                hpMultiplier += 0.5f;
+                hpMultiplier += hpMultiplier;
                 damageMultiplier += 0.5f;
                 coinMultiplier += 0.5f;
             }

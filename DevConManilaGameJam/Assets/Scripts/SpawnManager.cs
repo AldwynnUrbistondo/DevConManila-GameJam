@@ -197,13 +197,14 @@ public class SpawnManager : MonoBehaviour
 
                     if (hpMultiplier > 1)
                     {
-                        hpMultiplier *= hpMultiplier;
+                        hpMultiplier += hpMultiplier;
                     }
                     else
                     {
                         hpMultiplier += hpMultiplier;
+                        hpMultiplier += hpMultiplier;
                     }
-                    
+
                     damageMultiplier += 0.5f;
                     coinMultiplier += 0.5f;
                 }

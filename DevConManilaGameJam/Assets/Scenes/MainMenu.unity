@@ -1764,7 +1764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CYcEnd
+  m_text: CycEnd
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e663c486971b1064f8ba46818048e82c, type: 2}
   m_sharedMaterial: {fileID: -3965101775051620606, guid: e663c486971b1064f8ba46818048e82c, type: 2}
@@ -2896,6 +2896,7 @@ MonoBehaviour:
   buttonClickSound: {fileID: 209816366}
   buttonBuySound: {fileID: 1822722911}
   timeStop: {fileID: 1177168235}
+  music: {fileID: 0}
 --- !u!1 &666059453
 GameObject:
   m_ObjectHideFlags: 0

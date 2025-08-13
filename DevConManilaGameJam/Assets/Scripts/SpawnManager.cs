@@ -195,7 +195,7 @@ public class SpawnManager : MonoBehaviour
                     addMeleeEnemies++;
                     addRangeEnemies++;
 
-                    hpMultiplier += hpMultiplier / 2;
+                    hpMultiplier += hpMultiplier / 10;
                     hpMultiplier += hpMultiplier;
 
                     damageMultiplier += 0.5f;

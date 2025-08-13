@@ -7,6 +7,7 @@ public class SpawnManager : MonoBehaviour
 {
     [HideInInspector] AudioManager am;
     public Animator timeBreak;
+    public Animator cycleBreak;
     public GameManager gameManager;
     public int wave;
     public TextMeshProUGUI waveText;
@@ -92,6 +93,7 @@ public class SpawnManager : MonoBehaviour
                 if (wave % 10 == 0)
                 {
                     timeBreak.Play("TimeBreak");
+                    cycleBreak.Play("CycleBreak");
                     am.PlaySound(SoundType.TimeStop);
                 }
 

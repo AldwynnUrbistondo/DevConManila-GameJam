@@ -34,6 +34,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource buttonClickSound;
     public AudioSource buttonBuySound;
     public AudioSource timeStop;
+    public AudioSource music;
 
     public void PlaySound(SoundType soundType)
     {

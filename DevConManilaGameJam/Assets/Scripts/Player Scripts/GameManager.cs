@@ -132,6 +132,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator FadeOut(float time)
     {
+        am.music.Stop();
         am.PlaySound(SoundType.TimeStop);
         timeStop.SetActive(true);
         yield return new WaitForSecondsRealtime(1);

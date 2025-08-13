@@ -12180,6 +12180,7 @@ MonoBehaviour:
   buttonClickSound: {fileID: 944917035}
   buttonBuySound: {fileID: 1755363366}
   timeStop: {fileID: 280035232}
+  music: {fileID: 974776824}
 --- !u!1 &1641687649
 GameObject:
   m_ObjectHideFlags: 0
@@ -13432,7 +13433,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 510954459
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_Sprite: {fileID: -1435669968522600217, guid: 60b5a0b004bc7094a983fca705e573c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

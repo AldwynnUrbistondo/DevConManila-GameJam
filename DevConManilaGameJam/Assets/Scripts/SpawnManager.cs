@@ -204,11 +204,9 @@ public class SpawnManager : MonoBehaviour
 
             if (w % 10 == 0)
             {
-                if (w > 10)
-                {
-                    addBossEnemies++;
-                }
-                
+                addBossEnemies++;
+                numOfBossEnemies += addBossEnemies;
+
             }
             else
             {

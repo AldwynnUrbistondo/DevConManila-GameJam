@@ -227,6 +227,7 @@ public class SpawnManager : MonoBehaviour
             
             numOfMeleeEnemies = Mathf.Clamp(numOfMeleeEnemies, 0, 50);
             numOfRangeEnemies = Mathf.Clamp(numOfRangeEnemies, 0, 50);
+            numOfBossEnemies = Mathf.Clamp(numOfBossEnemies, 0, 10);
         }
 
     }

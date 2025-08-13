@@ -1,0 +1,568 @@
+fileFormatVersion: 2
+guid: caf0bbbbc4453e948962b476bcb91403
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2688009231252062387
+    second: Boss_Sprite_Death-Sheet_0
+  - first:
+      213: 5636507717169921665
+    second: Boss_Sprite_Death-Sheet_1
+  - first:
+      213: -8361438537672919175
+    second: Boss_Sprite_Death-Sheet_2
+  - first:
+      213: -2269662195579284991
+    second: Boss_Sprite_Death-Sheet_3
+  - first:
+      213: -3539978003755370560
+    second: Boss_Sprite_Death-Sheet_4
+  - first:
+      213: 2503997969486149203
+    second: Boss_Sprite_Death-Sheet_5
+  - first:
+      213: 7632727809206571337
+    second: Boss_Sprite_Death-Sheet_6
+  - first:
+      213: 9037614754669520153
+    second: Boss_Sprite_Death-Sheet_7
+  - first:
+      213: 5980978435652101632
+    second: Boss_Sprite_Death-Sheet_8
+  - first:
+      213: -218076254992626217
+    second: Boss_Sprite_Death-Sheet_9
+  - first:
+      213: -3238830700868414867
+    second: Boss_Sprite_Death-Sheet_10
+  - first:
+      213: 8639865892582697484
+    second: Boss_Sprite_Death-Sheet_11
+  - first:
+      213: -7616379711650658998
+    second: Boss_Sprite_Death-Sheet_12
+  - first:
+      213: 7466760243686798058
+    second: Boss_Sprite_Death-Sheet_13
+  - first:
+      213: 319552586970925448
+    second: Boss_Sprite_Death-Sheet_14
+  - first:
+      213: 5164525160096958696
+    second: Boss_Sprite_Death-Sheet_15
+  - first:
+      213: 4463598395163899973
+    second: Boss_Sprite_Death-Sheet_16
+  - first:
+      213: -852983856566220985
+    second: Boss_Sprite_Death-Sheet_17
+  - first:
+      213: 2575769923091511838
+    second: Boss_Sprite_Death-Sheet_18
+  - first:
+      213: -1764175239998121616
+    second: Boss_Sprite_Death-Sheet_19
+  - first:
+      213: 6499308766458847478
+    second: Boss_Sprite_Death-Sheet_20
+  - first:
+      213: 5712069666209480873
+    second: Boss_Sprite_Death-Sheet_21
+  - first:
+      213: 6908129050369632025
+    second: Boss_Sprite_Death-Sheet_22
+  - first:
+      213: 8662469983868978627
+    second: Boss_Sprite_Death-Sheet_23
+  - first:
+      213: -8491842674053345041
+    second: Boss_Sprite_Death-Sheet_24
+  - first:
+      213: -1793463190611673262
+    second: Boss_Sprite_Death-Sheet_25
+  - first:
+      213: -838902114235243381
+    second: Boss_Sprite_Death-Sheet_26
+  - first:
+      213: 3169377117502124977
+    second: Boss_Sprite_Death-Sheet_27
+  - first:
+      213: 566092963248916119
+    second: Boss_Sprite_Death-Sheet_28
+  - first:
+      213: 5600091310618650571
+    second: Boss_Sprite_Death-Sheet_29
+  - first:
+      213: 7429484025798957201
+    second: Boss_Sprite_Death-Sheet_30
+  - first:
+      213: 1865214363305780562
+    second: Boss_Sprite_Death-Sheet_31
+  - first:
+      213: 2647184514307820496
+    second: Boss_Sprite_Death-Sheet_32
+  - first:
+      213: 74244837340173863
+    second: Boss_Sprite_Death-Sheet_33
+  - first:
+      213: -4557462197654794598
+    second: Boss_Sprite_Death-Sheet_34
+  - first:
+      213: -5082822185914162455
+    second: Boss_Sprite_Death-Sheet_35
+  - first:
+      213: -69603324769144658
+    second: Boss_Sprite_Death-Sheet_36
+  - first:
+      213: -2744430858830255412
+    second: Boss_Sprite_Death-Sheet_37
+  - first:
+      213: 4605932789482622095
+    second: Boss_Sprite_Death-Sheet_38
+  - first:
+      213: 5594738776731324762
+    second: Boss_Sprite_Death-Sheet_39
+  - first:
+      213: -4346485370278668753
+    second: Boss_Sprite_Death-Sheet_40
+  - first:
+      213: -2081149630757649466
+    second: Boss_Sprite_Death-Sheet_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_Sprite_Death-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4fff3a88d542bad0800000000000000
+      internalID: -2688009231252062387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Death-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e39afb7e5e83e40800000000000000
+      internalID: 5636507717169921665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Death-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9777eb663f336fb80800000000000000
+      internalID: -8361438537672919175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Death-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1021d50224a8080e0800000000000000
+      internalID: -2269662195579284991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Death-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7f67dd2c87fdec0800000000000000
+      internalID: -3539978003755370560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Death-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3567581f2ecffb220800000000000000
+      internalID: 2503997969486149203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Death-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 941d007a085ece960800000000000000
+      internalID: 7632727809206571337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Death-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 915e7ec6cbe0c6d70800000000000000
+      internalID: 9037614754669520153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Death-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 006a05ad234b00350800000000000000
+      internalID: 5980978435652101632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Death-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd873f2dcc39fcf0800000000000000
+      internalID: -218076254992626217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Death-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d62db1b33ac5d03d0800000000000000
+      internalID: -3238830700868414867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Death-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0aa76ad048f6e770800000000000000
+      internalID: 8639865892582697484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Death-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a45029c610f2d4690800000000000000
+      internalID: -7616379711650658998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0cde9d8d71029874eb5ce8a042a4b42d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Boss_Sprite_Death-Sheet_0: -2688009231252062387
+      Boss_Sprite_Death-Sheet_1: 5636507717169921665
+      Boss_Sprite_Death-Sheet_10: -3238830700868414867
+      Boss_Sprite_Death-Sheet_11: 8639865892582697484
+      Boss_Sprite_Death-Sheet_12: -7616379711650658998
+      Boss_Sprite_Death-Sheet_2: -8361438537672919175
+      Boss_Sprite_Death-Sheet_3: -2269662195579284991
+      Boss_Sprite_Death-Sheet_4: -3539978003755370560
+      Boss_Sprite_Death-Sheet_5: 2503997969486149203
+      Boss_Sprite_Death-Sheet_6: 7632727809206571337
+      Boss_Sprite_Death-Sheet_7: 9037614754669520153
+      Boss_Sprite_Death-Sheet_8: 5980978435652101632
+      Boss_Sprite_Death-Sheet_9: -218076254992626217
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

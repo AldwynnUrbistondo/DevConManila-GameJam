@@ -30,6 +30,8 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public Transform healthBarCanvas;
 
+    public bool isWalking = false;
+
     public virtual void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
@@ -66,8 +68,9 @@ public class Enemy : MonoBehaviour, IDamageable
             StartCoroutine(AttackTarget());
         }
 
-        if (rb.linearVelocity != Vector2.zero && !isDying)
+        if (rb.linearVelocity != Vector2.zero && !isDying && !isWalking)
         {
+            isWalking = true;
             anim.Play("Walk");
         }
 
@@ -76,11 +79,15 @@ public class Enemy : MonoBehaviour, IDamageable
     #region TakeDamage and Die
     public void TakeDamage(float damage)
     {
-        currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        if (!isDying)
+        {
+            currentHealth -= damage;
+            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        am.PlaySound(SoundType.PlayerHitEnemy);
-        StartCoroutine(HitColor());
+            am.PlaySound(SoundType.PlayerHitEnemy);
+            StartCoroutine(HitColor());
+        }
+        
 
         if (currentHealth <= 0)
         {
@@ -94,6 +101,8 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         if (!isDying)
         {
+            isFrozen = false;
+            spriteRenderer.color = Color.white;
             isDying = true;
             StartCoroutine(StartDie());
         }
@@ -153,9 +162,8 @@ public class Enemy : MonoBehaviour, IDamageable
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
 
         Color colorA;
-        if (isFrozen)
+        if (isFrozen && !isDying)
         {
-            //colorA = Color.blue; // new Color(0.68f, 0.85f, 0.9f); // LightBlue (RGB: 173, 216, 230)
             colorA = new Color(139f / 255f, 214f / 255f, 248f / 255f);
         }
         else
@@ -169,6 +177,13 @@ public class Enemy : MonoBehaviour, IDamageable
 
         while (t < 1)
         {
+            // Exit early if dying
+            if (isDying)
+            {
+                sprite.color = Color.white;
+                yield break;
+            }
+
             t += Time.deltaTime / duration;
             sprite.color = Color.Lerp(colorA, colorB, t);
             yield return null;
@@ -178,10 +193,16 @@ public class Enemy : MonoBehaviour, IDamageable
 
         while (t < 1)
         {
+            // Exit early if dying
+            if (isDying)
+            {
+                sprite.color = Color.white;
+                yield break;
+            }
+
             t += Time.deltaTime / duration;
             sprite.color = Color.Lerp(colorB, colorA, t);
             yield return null;
         }
-
     }
 }

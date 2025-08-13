@@ -8,11 +8,20 @@ public class ProjectileIce : Projectile
         Enemy enemy = actor.GetComponent<Enemy>();
         if (damageable != null && enemy != null)
         {
-            
+
             enemy.isFrozen = true;
-            enemy.spriteRenderer.color = new Color(139f / 255f, 214f / 255f, 248f / 255f);
             damageable.TakeDamage(damage);
             Destroy(gameObject);
+
+
+            /*
+            if (!enemy.isDying)
+            {
+               
+                enemy.spriteRenderer.color = new Color(139f / 255f, 214f / 255f, 248f / 255f);
+            }
+           */
+           
         }
 
     }

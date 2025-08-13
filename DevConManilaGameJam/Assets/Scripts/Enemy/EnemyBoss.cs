@@ -6,5 +6,6 @@ public class EnemyBoss : EnemyRange
     {
         base.Start();
         attackDistance = 6;
+        transform.position = new Vector2(transform.position.x, transform.position.y + 0.98f);
     }
 }

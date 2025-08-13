@@ -1,0 +1,373 @@
+fileFormatVersion: 2
+guid: 1b635db39f2e7ed469522d424245f7a3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4042076411845963972
+    second: Boss_Sprite_Walk__Move_Sheet_0
+  - first:
+      213: 9154848220074066018
+    second: Boss_Sprite_Walk__Move_Sheet_1
+  - first:
+      213: -3046838702194249999
+    second: Boss_Sprite_Walk__Move_Sheet_2
+  - first:
+      213: -3737979106844258623
+    second: Boss_Sprite_Walk__Move_Sheet_3
+  - first:
+      213: -6639553907516081878
+    second: Boss_Sprite_Walk__Move_Sheet_4
+  - first:
+      213: 1016800094305622686
+    second: Boss_Sprite_Walk__Move_Sheet_5
+  - first:
+      213: -811260659322866257
+    second: Boss_Sprite_Walk__Move_Sheet_6
+  - first:
+      213: 1433417078505062067
+    second: Boss_Sprite_Walk__Move_Sheet_7
+  - first:
+      213: 3082455797062975031
+    second: Boss_Sprite_Walk__Move_Sheet_8
+  - first:
+      213: 2886108648479876992
+    second: Boss_Sprite_Walk__Move_Sheet_9
+  - first:
+      213: 582388502047433841
+    second: Boss_Sprite_Walk__Move_Sheet_10
+  - first:
+      213: 3128716354851309635
+    second: Boss_Sprite_Walk__Move_Sheet_11
+  - first:
+      213: -742059423799004149
+    second: Boss_Sprite_Walk__Move_Sheet_12
+  - first:
+      213: 6400545180179664982
+    second: Boss_Sprite_Walk__Move_Sheet_13
+  - first:
+      213: 8888028855528664473
+    second: Boss_Sprite_Walk__Move_Sheet_14
+  - first:
+      213: -3613799056889075428
+    second: Boss_Sprite_Walk__Move_Sheet_15
+  - first:
+      213: -4007976991705995548
+    second: Boss_Sprite_Walk__Move_Sheet_16
+  - first:
+      213: 3075300960012421684
+    second: Boss_Sprite_Walk__Move_Sheet_17
+  - first:
+      213: 1866064005160086924
+    second: Boss_Sprite_Walk__Move_Sheet_18
+  - first:
+      213: -7367295466388782449
+    second: Boss_Sprite_Walk__Move_Sheet_19
+  - first:
+      213: 1780029373681711818
+    second: Boss_Sprite_Walk__Move_Sheet_20
+  - first:
+      213: -481852487831714075
+    second: Boss_Sprite_Walk__Move_Sheet_21
+  - first:
+      213: -4685061773923915798
+    second: Boss_Sprite_Walk__Move_Sheet_22
+  - first:
+      213: -8151552397412172407
+    second: Boss_Sprite_Walk__Move_Sheet_23
+  - first:
+      213: 6303665821687388721
+    second: Boss_Sprite_Walk__Move_Sheet_24
+  - first:
+      213: 8308611467693000674
+    second: Boss_Sprite_Walk__Move_Sheet_25
+  - first:
+      213: -1804981204136906998
+    second: Boss_Sprite_Walk__Move_Sheet_26
+  - first:
+      213: 7289177836528941561
+    second: Boss_Sprite_Walk__Move_Sheet_27
+  - first:
+      213: -4691116255325179104
+    second: Boss_Sprite_Walk__Move_Sheet_28
+  - first:
+      213: 4679686469842881337
+    second: Boss_Sprite_Walk__Move_Sheet_29
+  - first:
+      213: -5285075676723634334
+    second: Boss_Sprite_Walk__Move_Sheet_30
+  - first:
+      213: -5068723039095113428
+    second: Boss_Sprite_Walk__Move_Sheet_31
+  - first:
+      213: 9017794903941688493
+    second: Boss_Sprite_Walk__Move_Sheet_32
+  - first:
+      213: 1687781534844000271
+    second: Boss_Sprite_Walk__Move_Sheet_33
+  - first:
+      213: -8749673412004017062
+    second: Boss_Sprite_Walk__Move_Sheet_34
+  - first:
+      213: 4716601902512146453
+    second: Boss_Sprite_Walk__Move_Sheet_35
+  - first:
+      213: 6312099409667905329
+    second: Boss_Sprite_Walk__Move_Sheet_36
+  - first:
+      213: 8836093446893540250
+    second: Boss_Sprite_Walk__Move_Sheet_37
+  - first:
+      213: 3691068069684499454
+    second: Boss_Sprite_Walk__Move_Sheet_38
+  - first:
+      213: -742969406043009882
+    second: Boss_Sprite_Walk__Move_Sheet_39
+  - first:
+      213: 3524113617259083305
+    second: Boss_Sprite_Walk__Move_Sheet_40
+  - first:
+      213: -398249642729913727
+    second: Boss_Sprite_Walk__Move_Sheet_41
+  - first:
+      213: 4224911253594244119
+    second: Boss_Sprite_Walk__Move_Sheet_42
+  - first:
+      213: -7239090343911407331
+    second: Boss_Sprite_Walk__Move_Sheet_43
+  - first:
+      213: 3168679343175591439
+    second: Boss_Sprite_Walk__Move_Sheet_44
+  - first:
+      213: -1458400248090776631
+    second: Boss_Sprite_Walk__Move_Sheet_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_Sprite_Walk__Move_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f8fe45be8a7e7c0800000000000000
+      internalID: -4042076411845963972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Walk__Move_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260c122a3fd8c0f70800000000000000
+      internalID: 9154848220074066018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Walk__Move_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1feaccbd75477b5d0800000000000000
+      internalID: -3046838702194249999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Walk__Move_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce47b69ec7002cc0800000000000000
+      internalID: -3737979106844258623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1f8f47c63b46d704583b434231de172c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Boss_Sprite_Walk__Move_Sheet_0: -4042076411845963972
+      Boss_Sprite_Walk__Move_Sheet_1: 9154848220074066018
+      Boss_Sprite_Walk__Move_Sheet_2: -3046838702194249999
+      Boss_Sprite_Walk__Move_Sheet_3: -3737979106844258623
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

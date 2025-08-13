@@ -50,7 +50,8 @@ public class EnemyMelee : Enemy
 
     public override IEnumerator AttackTarget()
     {
-        
+        isWalking = false;
+
         float animationRemainingTime = attackClip.length - attackLandingTime;
         anim.Play("Attack");
 

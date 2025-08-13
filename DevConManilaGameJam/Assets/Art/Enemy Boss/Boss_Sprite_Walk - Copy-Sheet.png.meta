@@ -1,0 +1,317 @@
+fileFormatVersion: 2
+guid: ce1ce4a340ac9fd448ac8e7ffa11f1be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2578346884961711054
+    second: Boss_Sprite_Walk - Copy-Sheet_0
+  - first:
+      213: -2992318107722676982
+    second: Boss_Sprite_Walk - Copy-Sheet_1
+  - first:
+      213: 1396470255249544795
+    second: Boss_Sprite_Walk - Copy-Sheet_2
+  - first:
+      213: -8026395215472274810
+    second: Boss_Sprite_Walk - Copy-Sheet_3
+  - first:
+      213: -3728919436997339640
+    second: Boss_Sprite_Walk - Copy-Sheet_4
+  - first:
+      213: 8146729044019163277
+    second: Boss_Sprite_Walk - Copy-Sheet_5
+  - first:
+      213: 7380290665263724325
+    second: Boss_Sprite_Walk - Copy-Sheet_6
+  - first:
+      213: -4618229863427527531
+    second: Boss_Sprite_Walk - Copy-Sheet_7
+  - first:
+      213: -6163569855613207465
+    second: Boss_Sprite_Walk - Copy-Sheet_8
+  - first:
+      213: -3592404066826636401
+    second: Boss_Sprite_Walk - Copy-Sheet_9
+  - first:
+      213: -8748282484758710300
+    second: Boss_Sprite_Walk - Copy-Sheet_10
+  - first:
+      213: 3041306786450058828
+    second: Boss_Sprite_Walk - Copy-Sheet_11
+  - first:
+      213: 7549206966206287244
+    second: Boss_Sprite_Walk - Copy-Sheet_12
+  - first:
+      213: -3402119970856311121
+    second: Boss_Sprite_Walk - Copy-Sheet_13
+  - first:
+      213: 8580114206734501567
+    second: Boss_Sprite_Walk - Copy-Sheet_14
+  - first:
+      213: 1834890857167246583
+    second: Boss_Sprite_Walk - Copy-Sheet_15
+  - first:
+      213: -5446017642818483379
+    second: Boss_Sprite_Walk - Copy-Sheet_16
+  - first:
+      213: 8817579956967889258
+    second: Boss_Sprite_Walk - Copy-Sheet_17
+  - first:
+      213: 2466883658410263226
+    second: Boss_Sprite_Walk - Copy-Sheet_18
+  - first:
+      213: -7092758938807060964
+    second: Boss_Sprite_Walk - Copy-Sheet_19
+  - first:
+      213: -2144263775217512050
+    second: Boss_Sprite_Walk - Copy-Sheet_20
+  - first:
+      213: -5393372574519331830
+    second: Boss_Sprite_Walk - Copy-Sheet_21
+  - first:
+      213: -9039581387494517089
+    second: Boss_Sprite_Walk - Copy-Sheet_22
+  - first:
+      213: 7761686873545133023
+    second: Boss_Sprite_Walk - Copy-Sheet_23
+  - first:
+      213: 6257359991325078368
+    second: Boss_Sprite_Walk - Copy-Sheet_24
+  - first:
+      213: 5231103993633972231
+    second: Boss_Sprite_Walk - Copy-Sheet_25
+  - first:
+      213: -7836462438471826803
+    second: Boss_Sprite_Walk - Copy-Sheet_26
+  - first:
+      213: 951887621492638492
+    second: Boss_Sprite_Walk - Copy-Sheet_27
+  - first:
+      213: 2873711170406648065
+    second: Boss_Sprite_Walk - Copy-Sheet_28
+  - first:
+      213: 4569178332231335565
+    second: Boss_Sprite_Walk - Copy-Sheet_29
+  - first:
+      213: -284660565394168260
+    second: Boss_Sprite_Walk - Copy-Sheet_30
+  - first:
+      213: -2517128934999800041
+    second: Boss_Sprite_Walk - Copy-Sheet_31
+  - first:
+      213: 6782281241583914612
+    second: Boss_Sprite_Walk - Copy-Sheet_32
+  - first:
+      213: -5955576150004166096
+    second: Boss_Sprite_Walk - Copy-Sheet_33
+  - first:
+      213: -5315366947476053206
+    second: Boss_Sprite_Walk - Copy-Sheet_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_Sprite_Walk - Copy-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c4f163b2fd73cd0800000000000000
+      internalID: -2578346884961711054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Walk - Copy-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a058836f8862976d0800000000000000
+      internalID: -2992318107722676982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Sprite_Walk - Copy-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b565c8f5c42416310800000000000000
+      internalID: 1396470255249544795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 92094bc96b302474796d52bb65e00d6c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Boss_Sprite_Walk - Copy-Sheet_0: -2578346884961711054
+      Boss_Sprite_Walk - Copy-Sheet_1: -2992318107722676982
+      Boss_Sprite_Walk - Copy-Sheet_2: 1396470255249544795
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

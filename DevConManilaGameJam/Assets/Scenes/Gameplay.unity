@@ -5153,7 +5153,7 @@ MonoBehaviour:
   gameManager: {fileID: 534487955}
   wave: 15
   waveText: {fileID: 438706621}
-  meleeEnemyPrefab: {fileID: 994751779031687831, guid: cca381104b04a0f45a23d343d5becf31, type: 3}
+  meleeEnemyPrefab: {fileID: 4273972364835385361, guid: 010f471ee7e51d84691e114a321fd78c, type: 3}
   rangeEnemyPrefab: {fileID: 2884134549180445927, guid: bc66235e26c85b5499409546973bf304, type: 3}
   bossEnemyPrefab: {fileID: 994751779031687831, guid: cca381104b04a0f45a23d343d5becf31, type: 3}
   spawnLocations:

@@ -60,20 +60,23 @@ public class EnemyRange : Enemy
         if (targetRay.collider != null)
         {
 
-            GameObject prj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
-            EnemyProjectile prjScript = prj.GetComponent<EnemyProjectile>();
-            prjScript.damage = damage;
-            if (isFacingRight)
-            {
-                prjScript.direction = Vector2.right;
-            }
-            else
-            {
-                prjScript.direction = -Vector2.right;
-            }
-            prjScript.Shoot();
-            am.PlaySound(SoundType.LaserProjectile);
+            
         }
+
+        GameObject prj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        EnemyProjectile prjScript = prj.GetComponent<EnemyProjectile>();
+        prjScript.damage = damage;
+        if (isFacingRight)
+        {
+            prjScript.direction = Vector2.right;
+        }
+        else
+        {
+            prjScript.direction = -Vector2.right;
+        }
+        prjScript.Shoot();
+        am.PlaySound(SoundType.LaserProjectile);
+
         yield return new WaitForSeconds(animationRemainingTime);
         yield return new WaitForSeconds(2);
 

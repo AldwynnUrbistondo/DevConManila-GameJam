@@ -1,0 +1,470 @@
+fileFormatVersion: 2
+guid: af3f18132c24a0042a3e621da0cce2e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -925783871862283720
+    second: EnemySprite_Melee_Death-Sheet_0
+  - first:
+      213: 4923841287046148456
+    second: EnemySprite_Melee_Death-Sheet_1
+  - first:
+      213: 1170240794684556442
+    second: EnemySprite_Melee_Death-Sheet_2
+  - first:
+      213: 4972120482832725258
+    second: EnemySprite_Melee_Death-Sheet_3
+  - first:
+      213: -2972257302209345944
+    second: EnemySprite_Melee_Death-Sheet_4
+  - first:
+      213: 7279309917362121662
+    second: EnemySprite_Melee_Death-Sheet_5
+  - first:
+      213: -3595587035944404449
+    second: EnemySprite_Melee_Death-Sheet_6
+  - first:
+      213: -5907411384314756936
+    second: EnemySprite_Melee_Death-Sheet_7
+  - first:
+      213: -1974821886774303357
+    second: EnemySprite_Melee_Death-Sheet_8
+  - first:
+      213: 5969150327114551136
+    second: EnemySprite_Melee_Death-Sheet_9
+  - first:
+      213: 5988982746367019080
+    second: EnemySprite_Melee_Death-Sheet_10
+  - first:
+      213: -3168547734462323366
+    second: EnemySprite_Melee_Death-Sheet_11
+  - first:
+      213: 6300970219283430489
+    second: EnemySprite_Melee_Death-Sheet_12
+  - first:
+      213: -1824096726634094506
+    second: EnemySprite_Melee_Death-Sheet_13
+  - first:
+      213: 6791865731274247287
+    second: EnemySprite_Melee_Death-Sheet_14
+  - first:
+      213: -8422021109212755169
+    second: EnemySprite_Melee_Death-Sheet_15
+  - first:
+      213: 2823449190791256447
+    second: EnemySprite_Melee_Death-Sheet_16
+  - first:
+      213: -6735422338733280963
+    second: EnemySprite_Melee_Death-Sheet_17
+  - first:
+      213: 4963958513206688210
+    second: EnemySprite_Melee_Death-Sheet_18
+  - first:
+      213: -8977447232108947819
+    second: EnemySprite_Melee_Death-Sheet_19
+  - first:
+      213: 5076264017991057741
+    second: EnemySprite_Melee_Death-Sheet_20
+  - first:
+      213: -8155565416324002571
+    second: EnemySprite_Melee_Death-Sheet_21
+  - first:
+      213: 6198883328347967278
+    second: EnemySprite_Melee_Death-Sheet_22
+  - first:
+      213: -4895830376021720200
+    second: EnemySprite_Melee_Death-Sheet_23
+  - first:
+      213: -7499362559687409419
+    second: EnemySprite_Melee_Death-Sheet_24
+  - first:
+      213: 487054882078750212
+    second: EnemySprite_Melee_Death-Sheet_25
+  - first:
+      213: -839883540835080806
+    second: EnemySprite_Melee_Death-Sheet_26
+  - first:
+      213: -771211568747612042
+    second: EnemySprite_Melee_Death-Sheet_27
+  - first:
+      213: 7163858224406128952
+    second: EnemySprite_Melee_Death-Sheet_28
+  - first:
+      213: 7280117055989517303
+    second: EnemySprite_Melee_Death-Sheet_29
+  - first:
+      213: -7499785004034393534
+    second: EnemySprite_Melee_Death-Sheet_30
+  - first:
+      213: -1219952264634491830
+    second: EnemySprite_Melee_Death-Sheet_31
+  - first:
+      213: -3959538377743937448
+    second: EnemySprite_Melee_Death-Sheet_32
+  - first:
+      213: 6692971621342616676
+    second: EnemySprite_Melee_Death-Sheet_33
+  - first:
+      213: 5511155128684197595
+    second: EnemySprite_Melee_Death-Sheet_34
+  - first:
+      213: -1491902809178061126
+    second: EnemySprite_Melee_Death-Sheet_35
+  - first:
+      213: -3568756469693549911
+    second: EnemySprite_Melee_Death-Sheet_36
+  - first:
+      213: 2393991990256868415
+    second: EnemySprite_Melee_Death-Sheet_37
+  - first:
+      213: -7108587028734104503
+    second: EnemySprite_Melee_Death-Sheet_38
+  - first:
+      213: -1470740130934008520
+    second: EnemySprite_Melee_Death-Sheet_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnemySprite_Melee_Death-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 832ecda3974f623f0800000000000000
+      internalID: -925783871862283720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemySprite_Melee_Death-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 861b9cc109ff45440800000000000000
+      internalID: 4923841287046148456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemySprite_Melee_Death-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9408d47dc78d3010800000000000000
+      internalID: 1170240794684556442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemySprite_Melee_Death-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0530b75c35800540800000000000000
+      internalID: 4972120482832725258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemySprite_Melee_Death-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86640c83bbb60c6d0800000000000000
+      internalID: -2972257302209345944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemySprite_Melee_Death-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebbe85a6dcd450560800000000000000
+      internalID: 7279309917362121662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemySprite_Melee_Death-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ab88b14a8e91ec0800000000000000
+      internalID: -3595587035944404449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemySprite_Melee_Death-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b002df05a8a40ea0800000000000000
+      internalID: -5907411384314756936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemySprite_Melee_Death-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 385a62005f50894e0800000000000000
+      internalID: -1974821886774303357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d81e80195283b6047ba6a3cc53968537
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      EnemySprite_Melee_Death-Sheet_0: -925783871862283720
+      EnemySprite_Melee_Death-Sheet_1: 4923841287046148456
+      EnemySprite_Melee_Death-Sheet_2: 1170240794684556442
+      EnemySprite_Melee_Death-Sheet_3: 4972120482832725258
+      EnemySprite_Melee_Death-Sheet_4: -2972257302209345944
+      EnemySprite_Melee_Death-Sheet_5: 7279309917362121662
+      EnemySprite_Melee_Death-Sheet_6: -3595587035944404449
+      EnemySprite_Melee_Death-Sheet_7: -5907411384314756936
+      EnemySprite_Melee_Death-Sheet_8: -1974821886774303357
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

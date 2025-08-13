@@ -229,8 +229,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 510954459
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 6064602534575620237, guid: 25a5697b01b5db34da409939081da3d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -326,7 +326,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   attackClip: {fileID: 7400000, guid: 8d1b8e74b7c0d7545aca5e6972faee2e, type: 2}
   deathClip: {fileID: 7400000, guid: c9056fde503273f43a715d6ec53688a1, type: 2}
-  attackLandingTime: 0.004167
+  attackLandingTime: 0.4167
   currentHealth: 10
   maxHealth: 10
   damage: 1
@@ -422,7 +422,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -831669467
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &5006495413095577377

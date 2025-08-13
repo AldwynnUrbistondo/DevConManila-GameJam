@@ -51,8 +51,10 @@ public class EnemyRange : Enemy
     {
         float animationRemainingTime = attackClip.length - attackLandingTime;
         anim.Play("Attack");
+        
 
         yield return new WaitForSeconds(attackLandingTime);
+
         if (targetRay.collider != null)
         {
 
@@ -68,6 +70,7 @@ public class EnemyRange : Enemy
                 prjScript.direction = -Vector2.right;
             }
             prjScript.Shoot();
+            am.PlaySound(SoundType.LaserProjectile);
         }
         yield return new WaitForSeconds(animationRemainingTime);
         yield return new WaitForSeconds(2);

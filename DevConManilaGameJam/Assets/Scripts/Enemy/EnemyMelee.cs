@@ -9,6 +9,9 @@ public class EnemyMelee : Enemy
     {
         base.Start();
         attackDistance = Random.Range(1f, 2f);
+
+        //offset
+        transform.position = new Vector2(transform.position.x, transform.position.y - 0.38f);
     }
 
     public override void Update()

@@ -306,7 +306,7 @@ MonoBehaviour:
   deathClip: {fileID: 7400000, guid: b62218f3710592243b9590254a7fc47f, type: 2}
   attackLandingTime: 0.567
   currentHealth: 100
-  maxHealth: 100
+  maxHealth: 200
   damage: 5
   isDying: 0
   isAttacking: 0

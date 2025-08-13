@@ -29,10 +29,12 @@ public class SpawnManager : MonoBehaviour
     [Header("Enemy Count")]
     public int numOfMeleeEnemies;
     public int numOfRangeEnemies;
+    public int numOfBossEnemies;
 
     [Header("Add Enemy")]
     public int addMeleeEnemies;
     public int addRangeEnemies;
+    public int addBossEnemies;
 
     public float hpMultiplier = 0;
     public float damageMultiplier = 0;
@@ -144,7 +146,11 @@ public class SpawnManager : MonoBehaviour
         }
         if (wave % 10 == 0)
         {
-            enemyQueue.Add(bossEnemyPrefab);
+            for (int i = 0; i < numOfBossEnemies; i++)
+            {
+                enemyQueue.Add(bossEnemyPrefab);
+            }
+            
         }
         Shuffle(enemyQueue);
 
@@ -188,10 +194,7 @@ public class SpawnManager : MonoBehaviour
                 {
                     addMeleeEnemies++;
                     addRangeEnemies++;
-                }
 
-                if (w > 10)
-                {
                     hpMultiplier += hpMultiplier;
                     damageMultiplier += 0.5f;
                     coinMultiplier += 0.5f;
@@ -201,7 +204,11 @@ public class SpawnManager : MonoBehaviour
 
             if (w % 10 == 0)
             {
-                //
+                if (w > 10)
+                {
+                    addBossEnemies++;
+                }
+                
             }
             else
             {

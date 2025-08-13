@@ -5,6 +5,7 @@ public class EnemyRange : Enemy
 {
     public float attackDistance;
     public GameObject projectilePrefab;
+    public Transform firePoint;
 
     public override void Start()
     {
@@ -48,14 +49,14 @@ public class EnemyRange : Enemy
 
     public override IEnumerator AttackTarget()
     {
-        //float animationRemainingTime = attackClip.length - attackLandingTime;
-        // anim.Play("Attack");
+        float animationRemainingTime = attackClip.length - attackLandingTime;
+        anim.Play("Attack");
 
-        //yield return new WaitForSeconds(attackLandingTime);
+        yield return new WaitForSeconds(attackLandingTime);
         if (targetRay.collider != null)
         {
 
-            GameObject prj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            GameObject prj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
             EnemyProjectile prjScript = prj.GetComponent<EnemyProjectile>();
             prjScript.damage = damage;
             if (isFacingRight)
@@ -68,7 +69,7 @@ public class EnemyRange : Enemy
             }
             prjScript.Shoot();
         }
-        //yield return new WaitForSeconds(animationRemainingTime);
+        yield return new WaitForSeconds(animationRemainingTime);
         yield return new WaitForSeconds(2);
 
         isAttacking = false;

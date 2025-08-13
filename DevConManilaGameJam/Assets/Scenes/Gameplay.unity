@@ -499,7 +499,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 2f96b39290ce77d4ebca381972f8f389, type: 3}
   m_Resource: {fileID: 8300000, guid: 2f96b39290ce77d4ebca381972f8f389, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3782,7 +3782,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 2f96b39290ce77d4ebca381972f8f389, type: 3}
   m_Resource: {fileID: 8300000, guid: 2f96b39290ce77d4ebca381972f8f389, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5081,8 +5081,8 @@ MonoBehaviour:
   gameManager: {fileID: 534487955}
   wave: 15
   waveText: {fileID: 438706621}
-  meleeEnemyPrefab: {fileID: 6980312190939295689, guid: 1a62a91ea046e734c9b32adb46574b02, type: 3}
-  rangeEnemyPrefab: {fileID: 3806545884738903630, guid: 548d984205ff5dc4392116b9f6ccd6b2, type: 3}
+  meleeEnemyPrefab: {fileID: 2884134549180445927, guid: bc66235e26c85b5499409546973bf304, type: 3}
+  rangeEnemyPrefab: {fileID: 2884134549180445927, guid: bc66235e26c85b5499409546973bf304, type: 3}
   bossEnemyPrefab: {fileID: 4978387798156681972, guid: 4f373dbe8c7b2ff4bb7ce3a0f51786fb, type: 3}
   spawnLocations:
   - {fileID: 2094360638}
@@ -7415,10 +7415,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6e9aec9b3504a954285f522f28043167, type: 3}
-  m_Resource: {fileID: 8300000, guid: 6e9aec9b3504a954285f522f28043167, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 58f6234d92d6ec14592d2b2fdfd482cf, type: 3}
+  m_Resource: {fileID: 8300000, guid: 58f6234d92d6ec14592d2b2fdfd482cf, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9348,7 +9348,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 2f96b39290ce77d4ebca381972f8f389, type: 3}
   m_Resource: {fileID: 8300000, guid: 2f96b39290ce77d4ebca381972f8f389, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

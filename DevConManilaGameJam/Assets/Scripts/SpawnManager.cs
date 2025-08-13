@@ -38,6 +38,8 @@ public class SpawnManager : MonoBehaviour
     public float damageMultiplier = 0;
     public float coinMultiplier = 0;
 
+    int sortOrder;
+
     private void Start()
     {
         am = FindAnyObjectByType<AudioManager>();
@@ -47,22 +49,15 @@ public class SpawnManager : MonoBehaviour
         waveText.text = $"Wave: {wave}";
     }
 
-    IEnumerator SpawnEnemies()
+
+
+    IEnumerator InitialSpawn()
     {
         float delay = totalSpawnTime / maxNumOfEnemiesInScene;
         for (int i = 0; i < maxNumOfEnemiesInScene; i++)
         {
-            int randomLoc = Random.Range(0, spawnLocations.Length);
-            GameObject enemy = Instantiate(enemyQueue[0], spawnLocations[randomLoc].position, Quaternion.identity);
-            Enemy enemyScript = enemy.GetComponent<Enemy>();
-            enemyScript.coinDrop = (int)(enemyScript.coinDrop * coinMultiplier);
-            enemyScript.maxHealth = enemyScript.maxHealth * hpMultiplier;
-            enemyScript.damage = enemyScript.damage * damageMultiplier;
-            enemyScript.currentHealth = enemyScript.maxHealth;
 
-
-            enemyQueue.RemoveAt(0);
-            activeEnemies.Add(enemy);
+            SpawnEnemy();
 
             yield return new WaitForSeconds(delay);
         }
@@ -82,17 +77,7 @@ public class SpawnManager : MonoBehaviour
         {
             if (activeEnemies.Count != maxNumOfEnemiesInScene && enemyQueue.Count > 0)
             {
-                int randomLoc = Random.Range(0, spawnLocations.Length);
-                GameObject enemy = Instantiate(enemyQueue[0], spawnLocations[randomLoc].position, Quaternion.identity);
-                Enemy enemyScript = enemy.GetComponent<Enemy>();
-                enemyScript.coinDrop += (int)(enemyScript.coinDrop * coinMultiplier);
-                enemyScript.maxHealth += enemyScript.maxHealth * hpMultiplier;
-                enemyScript.damage += enemyScript.damage * damageMultiplier;
-                enemyScript.currentHealth = enemyScript.maxHealth;
-
-
-                enemyQueue.RemoveAt(0);
-                activeEnemies.Add(enemy);
+                SpawnEnemy();
 
                 return;
             }
@@ -114,6 +99,23 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+    public void SpawnEnemy()
+    {
+        int randomLoc = Random.Range(0, spawnLocations.Length);
+        GameObject enemy = Instantiate(enemyQueue[0], spawnLocations[randomLoc].position, Quaternion.identity);
+        Enemy enemyScript = enemy.GetComponent<Enemy>();
+        enemyScript.coinDrop = (int)(enemyScript.coinDrop * coinMultiplier);
+        enemyScript.maxHealth = enemyScript.maxHealth * hpMultiplier;
+        enemyScript.damage = enemyScript.damage * damageMultiplier;
+        enemyScript.currentHealth = enemyScript.maxHealth;
+        SpriteRenderer enemySprite = enemy.GetComponent<SpriteRenderer>();
+        enemySprite.sortingOrder = sortOrder;
+        sortOrder++;
+
+        enemyQueue.RemoveAt(0);
+        activeEnemies.Add(enemy);
+    }
+
     public void StartWave()
     {
         if (wave < 11)
@@ -130,6 +132,7 @@ public class SpawnManager : MonoBehaviour
 
         endWave = false;
         maxNumOfEnemiesInScene = 0;
+        sortOrder = 0;
 
         for (int i = 0; i < numOfMeleeEnemies; i++)
         {
@@ -151,7 +154,7 @@ public class SpawnManager : MonoBehaviour
             maxNumOfEnemiesInScene = 2;
         }
 
-        StartCoroutine(SpawnEnemies());
+        StartCoroutine(InitialSpawn());
 
     }
 

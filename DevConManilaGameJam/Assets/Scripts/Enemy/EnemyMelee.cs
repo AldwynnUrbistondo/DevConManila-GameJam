@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyMelee : Enemy
 {
     public float attackDistance;
-    public float attackLandingTime;
+
     public override void Start()
     {
         base.Start();
@@ -47,10 +47,11 @@ public class EnemyMelee : Enemy
 
     public override IEnumerator AttackTarget()
     {
-        //float animationRemainingTime = attackClip.length - attackLandingTime;
-        // anim.Play("Attack");
+        
+        float animationRemainingTime = attackClip.length - attackLandingTime;
+        anim.Play("Attack");
 
-        //yield return new WaitForSeconds(attackLandingTime);
+        yield return new WaitForSeconds(attackLandingTime);
 
         if (targetRay.collider != null)
         {
@@ -62,7 +63,7 @@ public class EnemyMelee : Enemy
 
             }
         }
-        //yield return new WaitForSeconds(animationRemainingTime);
+        yield return new WaitForSeconds(animationRemainingTime);
         yield return new WaitForSeconds(2);
 
         isAttacking = false;

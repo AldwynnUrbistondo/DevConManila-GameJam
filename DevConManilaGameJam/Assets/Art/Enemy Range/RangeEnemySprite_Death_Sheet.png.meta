@@ -1,0 +1,538 @@
+fileFormatVersion: 2
+guid: 8527f8a16244a0d4e90165e860d6c76a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 524215851142370538
+    second: RangeEnemySprite_Death_Sheet_0
+  - first:
+      213: -1096980159323703676
+    second: RangeEnemySprite_Death_Sheet_1
+  - first:
+      213: -7033937649476111861
+    second: RangeEnemySprite_Death_Sheet_2
+  - first:
+      213: 7415305868401613259
+    second: RangeEnemySprite_Death_Sheet_3
+  - first:
+      213: 1740993739803683372
+    second: RangeEnemySprite_Death_Sheet_4
+  - first:
+      213: 8477835158494030951
+    second: RangeEnemySprite_Death_Sheet_5
+  - first:
+      213: -1455981355069215387
+    second: RangeEnemySprite_Death_Sheet_6
+  - first:
+      213: -565164713267982089
+    second: RangeEnemySprite_Death_Sheet_7
+  - first:
+      213: -2659594312421034240
+    second: RangeEnemySprite_Death_Sheet_8
+  - first:
+      213: -604460467595936218
+    second: RangeEnemySprite_Death_Sheet_9
+  - first:
+      213: -2238968320037351494
+    second: RangeEnemySprite_Death_Sheet_10
+  - first:
+      213: -7096640753025102212
+    second: RangeEnemySprite_Death_Sheet_11
+  - first:
+      213: 228303305280008501
+    second: RangeEnemySprite_Death_Sheet_12
+  - first:
+      213: 3749272270710388363
+    second: RangeEnemySprite_Death_Sheet_13
+  - first:
+      213: -2428426434524773058
+    second: RangeEnemySprite_Death_Sheet_14
+  - first:
+      213: -3529170231987429405
+    second: RangeEnemySprite_Death_Sheet_15
+  - first:
+      213: 3162134873809837008
+    second: RangeEnemySprite_Death_Sheet_16
+  - first:
+      213: -526010227166953874
+    second: RangeEnemySprite_Death_Sheet_17
+  - first:
+      213: -4196392676387806157
+    second: RangeEnemySprite_Death_Sheet_18
+  - first:
+      213: 1221704994168237714
+    second: RangeEnemySprite_Death_Sheet_19
+  - first:
+      213: -2704096170990675
+    second: RangeEnemySprite_Death_Sheet_20
+  - first:
+      213: 2674246912867774324
+    second: RangeEnemySprite_Death_Sheet_21
+  - first:
+      213: 1318148401431999940
+    second: RangeEnemySprite_Death_Sheet_22
+  - first:
+      213: 7353114048323022144
+    second: RangeEnemySprite_Death_Sheet_23
+  - first:
+      213: 7177134968878714986
+    second: RangeEnemySprite_Death_Sheet_24
+  - first:
+      213: -1369381212982903506
+    second: RangeEnemySprite_Death_Sheet_25
+  - first:
+      213: -3170038027386085754
+    second: RangeEnemySprite_Death_Sheet_26
+  - first:
+      213: 352388437195091712
+    second: RangeEnemySprite_Death_Sheet_27
+  - first:
+      213: 6136980044486029903
+    second: RangeEnemySprite_Death_Sheet_28
+  - first:
+      213: -1745435751308039186
+    second: RangeEnemySprite_Death_Sheet_29
+  - first:
+      213: 4432623400421000218
+    second: RangeEnemySprite_Death_Sheet_30
+  - first:
+      213: -2938522646846017527
+    second: RangeEnemySprite_Death_Sheet_31
+  - first:
+      213: -7295283650761025434
+    second: RangeEnemySprite_Death_Sheet_32
+  - first:
+      213: -1584330896391563467
+    second: RangeEnemySprite_Death_Sheet_33
+  - first:
+      213: -4886152788631277363
+    second: RangeEnemySprite_Death_Sheet_34
+  - first:
+      213: -2488655412200197956
+    second: RangeEnemySprite_Death_Sheet_35
+  - first:
+      213: -7937949595790834293
+    second: RangeEnemySprite_Death_Sheet_36
+  - first:
+      213: 777953223961615736
+    second: RangeEnemySprite_Death_Sheet_37
+  - first:
+      213: 7254178418080699072
+    second: RangeEnemySprite_Death_Sheet_38
+  - first:
+      213: 1243607103439879873
+    second: RangeEnemySprite_Death_Sheet_39
+  - first:
+      213: 285464877591924225
+    second: RangeEnemySprite_Death_Sheet_40
+  - first:
+      213: 7015018917826288922
+    second: RangeEnemySprite_Death_Sheet_41
+  - first:
+      213: -5919920436195044260
+    second: RangeEnemySprite_Death_Sheet_42
+  - first:
+      213: -5852361553939782971
+    second: RangeEnemySprite_Death_Sheet_43
+  - first:
+      213: 2806113153120004876
+    second: RangeEnemySprite_Death_Sheet_44
+  - first:
+      213: -882710418109594175
+    second: RangeEnemySprite_Death_Sheet_45
+  - first:
+      213: 2650392806028573435
+    second: RangeEnemySprite_Death_Sheet_46
+  - first:
+      213: 3938076025197601044
+    second: RangeEnemySprite_Death_Sheet_47
+  - first:
+      213: 5448749692731017735
+    second: RangeEnemySprite_Death_Sheet_48
+  - first:
+      213: 7329607187416049046
+    second: RangeEnemySprite_Death_Sheet_49
+  - first:
+      213: 4739279637438780257
+    second: RangeEnemySprite_Death_Sheet_50
+  - first:
+      213: 8180609318805081597
+    second: RangeEnemySprite_Death_Sheet_51
+  - first:
+      213: -901828022487620348
+    second: RangeEnemySprite_Death_Sheet_52
+  - first:
+      213: 1662336314075761165
+    second: RangeEnemySprite_Death_Sheet_53
+  - first:
+      213: -8032047802546536578
+    second: RangeEnemySprite_Death_Sheet_54
+  - first:
+      213: -3308134670910112413
+    second: RangeEnemySprite_Death_Sheet_55
+  - first:
+      213: 8099309258268249135
+    second: RangeEnemySprite_Death_Sheet_56
+  - first:
+      213: -3633543116375800215
+    second: RangeEnemySprite_Death_Sheet_57
+  - first:
+      213: -4755952231909374842
+    second: RangeEnemySprite_Death_Sheet_58
+  - first:
+      213: 6034230976365560499
+    second: RangeEnemySprite_Death_Sheet_59
+  - first:
+      213: -8263715696826682835
+    second: RangeEnemySprite_Death_Sheet_60
+  - first:
+      213: 7862986338186963112
+    second: RangeEnemySprite_Death_Sheet_61
+  - first:
+      213: -2989646292767410787
+    second: RangeEnemySprite_Death_Sheet_62
+  - first:
+      213: -583140066218903159
+    second: RangeEnemySprite_Death_Sheet_63
+  - first:
+      213: 6391681098135766080
+    second: RangeEnemySprite_Death_Sheet_64
+  - first:
+      213: -7717096770677570448
+    second: RangeEnemySprite_Death_Sheet_65
+  - first:
+      213: -5638403588547172466
+    second: RangeEnemySprite_Death_Sheet_66
+  - first:
+      213: -2286715258463648294
+    second: RangeEnemySprite_Death_Sheet_67
+  - first:
+      213: 9078530190749087744
+    second: RangeEnemySprite_Death_Sheet_68
+  - first:
+      213: -364464653561974954
+    second: RangeEnemySprite_Death_Sheet_69
+  - first:
+      213: -694738224857962531
+    second: RangeEnemySprite_Death_Sheet_70
+  - first:
+      213: 603444680478304965
+    second: RangeEnemySprite_Death_Sheet_71
+  - first:
+      213: 2522236459567884734
+    second: RangeEnemySprite_Death_Sheet_72
+  - first:
+      213: -2553704323983647623
+    second: RangeEnemySprite_Death_Sheet_73
+  - first:
+      213: 4816524991591013029
+    second: RangeEnemySprite_Death_Sheet_74
+  - first:
+      213: -5642913733271341720
+    second: RangeEnemySprite_Death_Sheet_75
+  - first:
+      213: -2975836710189403073
+    second: RangeEnemySprite_Death_Sheet_76
+  - first:
+      213: -7065544384497610762
+    second: RangeEnemySprite_Death_Sheet_77
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RangeEnemySprite_Death_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae458f80a83664700800000000000000
+      internalID: 524215851142370538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangeEnemySprite_Death_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 486fbdd6b5eb6c0f0800000000000000
+      internalID: -1096980159323703676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangeEnemySprite_Death_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b02fab6a9fe626e90800000000000000
+      internalID: -7033937649476111861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangeEnemySprite_Death_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc992fa366578e660800000000000000
+      internalID: 7415305868401613259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangeEnemySprite_Death_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a6d290590492810800000000000000
+      internalID: 1740993739803683372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangeEnemySprite_Death_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76caa5eb82257a570800000000000000
+      internalID: 8477835158494030951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangeEnemySprite_Death_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f62384933f8f04ea60e0faa125ce6b
+      internalID: 764385386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d46145bfc38269c4db8ae02c3400cd9c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RangeEnemySprite_Death_Sheet_0: 524215851142370538
+      RangeEnemySprite_Death_Sheet_1: -1096980159323703676
+      RangeEnemySprite_Death_Sheet_2: -7033937649476111861
+      RangeEnemySprite_Death_Sheet_3: 7415305868401613259
+      RangeEnemySprite_Death_Sheet_4: 1740993739803683372
+      RangeEnemySprite_Death_Sheet_5: 8477835158494030951
+      RangeEnemySprite_Death_Sheet_6: 764385386
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

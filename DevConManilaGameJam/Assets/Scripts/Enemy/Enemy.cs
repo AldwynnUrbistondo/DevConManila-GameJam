@@ -11,8 +11,9 @@ public class Enemy : MonoBehaviour, IDamageable
     [HideInInspector] public Animator anim;
 
     [Header("Clips")]
-    public AnimationClip attckClip;
+    public AnimationClip attackClip;
     public AnimationClip deathClip;
+    public float attackLandingTime;
 
     public float currentHealth;
     public float maxHealth;
@@ -59,15 +60,15 @@ public class Enemy : MonoBehaviour, IDamageable
             rb.linearVelocity = Vector2.zero;
         }
 
-        if (!isAttacking && TargetInRange())
+        if (!isAttacking && TargetInRange() && !isDying)
         {
             isAttacking = true;
             StartCoroutine(AttackTarget());
         }
 
-        if (rb.linearVelocity != Vector2.zero)
+        if (rb.linearVelocity != Vector2.zero && !isDying)
         {
-            //anim.Play("Walk');
+            anim.Play("Walk");
         }
 
     }
@@ -111,8 +112,8 @@ public class Enemy : MonoBehaviour, IDamageable
         {
             col.enabled = false;
         }
-        //anim.Play("Die");
-        //yield return new WaitForSeconds(deathClip.length);
+        anim.Play("Die");
+        yield return new WaitForSeconds(deathClip.length);
         yield return null;
         Destroy(this.gameObject);
     }
@@ -154,7 +155,8 @@ public class Enemy : MonoBehaviour, IDamageable
         Color colorA;
         if (isFrozen)
         {
-            colorA = Color.blue; // new Color(0.68f, 0.85f, 0.9f); // LightBlue (RGB: 173, 216, 230)
+            //colorA = Color.blue; // new Color(0.68f, 0.85f, 0.9f); // LightBlue (RGB: 173, 216, 230)
+            colorA = new Color(139f / 255f, 214f / 255f, 248f / 255f);
         }
         else
         {

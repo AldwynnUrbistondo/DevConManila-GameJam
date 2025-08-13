@@ -195,15 +195,8 @@ public class SpawnManager : MonoBehaviour
                     addMeleeEnemies++;
                     addRangeEnemies++;
 
-                    if (hpMultiplier == 1)
-                    {
-                        hpMultiplier += hpMultiplier;
-                    }
-                    else
-                    {
-                        hpMultiplier += hpMultiplier;
-                        hpMultiplier += hpMultiplier;
-                    }
+                    hpMultiplier += hpMultiplier / 2;
+                    hpMultiplier += hpMultiplier;
 
                     damageMultiplier += 0.5f;
                     coinMultiplier += 0.5f;

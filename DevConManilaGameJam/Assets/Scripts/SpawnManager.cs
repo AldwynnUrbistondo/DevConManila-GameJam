@@ -35,7 +35,6 @@ public class SpawnManager : MonoBehaviour
     [Header("Add Enemy")]
     public int addMeleeEnemies;
     public int addRangeEnemies;
-    public int addBossEnemies;
 
     public float hpMultiplier = 0;
     public float damageMultiplier = 0;
@@ -180,8 +179,11 @@ public class SpawnManager : MonoBehaviour
         // Reset counts to calculate from scratch
         numOfMeleeEnemies = 1;
         numOfRangeEnemies = 0;
+        numOfBossEnemies = 0;  
+
         addMeleeEnemies = 1;
         addRangeEnemies = 1;
+
         hpMultiplier = 1;
         damageMultiplier = 1;
         coinMultiplier = 1;
@@ -208,9 +210,7 @@ public class SpawnManager : MonoBehaviour
 
             if (w % 10 == 0)
             {
-                //addBossEnemies++;
                 numOfBossEnemies++;
-
             }
             else
             {

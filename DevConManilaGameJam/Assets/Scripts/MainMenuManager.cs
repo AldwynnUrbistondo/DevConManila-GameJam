@@ -43,7 +43,7 @@ public class MainMenuManager : MonoBehaviour
         else
         {
             PlayerPrefs.SetInt("Saved Game", 1);
-            ChangeScene();
+            ConfirmNewGame();
         }
     }
 
